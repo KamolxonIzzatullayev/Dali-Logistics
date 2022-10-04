@@ -1,0 +1,32 @@
+.c-cu-menu {
+  .menu {
+    position: relative;
+    z-index: 2;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+
+    &-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__list {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+
+        &-item {
+          margin-left: 3rem;
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

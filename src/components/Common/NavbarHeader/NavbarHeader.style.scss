@@ -1,0 +1,29 @@
+.c-cu-navbar {
+  .container {
+    position: relative;
+    z-index: 2;
+
+    .navbar-header {
+      &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-item {
+          margin-left: 2rem;
+          display: flex;
+
+          &-link {
+            text-decoration: none;
+            font-weight: 400;
+            color: rgba($color: #fff, $alpha: 0.6);
+            img {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
