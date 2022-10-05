@@ -1,0 +1,17 @@
+.c-l-header {
+  
+  background: url("~/assets/images/headerBackground.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-top: 1rem;
+  position: relative;
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 6rem 0 8rem 0;
+  }
+}
