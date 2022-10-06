@@ -7,13 +7,14 @@
           v-for="(header, index) in tabHeaders"
           :key="index"
           @click="makeTab(header.id)"
+          :class="header.isActive ? 'active' : ''"
         >
           {{ header.title }}
         </li>
       </ul>
     </div>
     <div class="tab-panels">
-      {{ activeTabPanel }}
+      <h1 class="text-center">{{ activeTabPanel.title }}</h1>
     </div>
   </div>
 </template>

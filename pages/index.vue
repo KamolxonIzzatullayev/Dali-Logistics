@@ -9,6 +9,7 @@
 
     <OffersView></OffersView>
 
+    <FormView></FormView>
   </div>
 </template>
 
@@ -16,9 +17,10 @@
 import HeaderView from "@/components/Layout/HeaderView/HeaderView.vue";
 import ExperienceView from "@/components/Layout/ExperienceView/ExperienceView.vue";
 import OffersView from "@/components/Layout/OffersView/OffersView.vue";
+import FormView from "@/components/Layout/FormView/FormView.vue";
 export default {
   name: "IndexPage",
-  components: { HeaderView, ExperienceView, OffersView },
+  components: { HeaderView, ExperienceView, OffersView, FormView },
 };
 </script>
 
