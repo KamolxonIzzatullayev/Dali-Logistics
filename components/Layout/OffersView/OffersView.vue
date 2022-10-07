@@ -1,7 +1,7 @@
 <template>
   <div class="c-l-offers">
     <div class="container">
-      <h1 class="text-center">Что мы предлагаем нашим клиентам</h1>
+      <h1 class="custom-headline">Что мы предлагаем нашим клиентам</h1>
 
         <OffersTab></OffersTab>
       

@@ -2,7 +2,7 @@
   <div class="c-l-experience">
     <div class="container">
       <div class="exp">
-        <h1 class="exp-header text-center">Опыт работы компании</h1>
+        <h1 class="custom-headline">Опыт работы компании</h1>
         <p class="exp-text text-center">
           Компания Dali предлагает выгодные условия грузоперевозки, с сочетанием
           скорости, надёжности и безопасности каждой доставки. Мы отвечаем за

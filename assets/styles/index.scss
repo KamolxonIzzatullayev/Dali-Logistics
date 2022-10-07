@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: none;
 }
 
@@ -24,3 +25,9 @@ input:focus, select:focus {
   }
 }
 
+h1.custom-headline {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+}
