@@ -17,13 +17,13 @@
           <div class="form-sender__body-email">
             <input
               type="text"
-              placeholder="Электронная почта"
+              placeholder="Электронная почта * "
             />
           </div>
         </div>
         <div class="form-sender__body-country">
-          <select v-model="sender.country">
-            <option disabled value="Выберите страну">Выберите страну</option>
+          <select class="form-select" v-model="sender.country">
+            <option disabled value="Выберите страну">Выберите страну * </option>
             <option
               :value="country"
               v-for="(country, index) in sender.countries"
@@ -32,8 +32,8 @@
               {{ country }}
             </option>
           </select>
-          <select v-model="sender.city">
-            <option disabled value="Выберите город">Выберите город</option>
+          <select class="form-select" v-model="sender.city">
+            <option disabled value="Выберите город">Выберите город * </option>
             <option
               value=""
               v-for="(city, index) in sender.cities[sender.country]"
@@ -44,8 +44,8 @@
           </select>
         </div>
         <div class="form-sender__body-country">
-          <select v-model="sender.region">
-            <option disabled value="Выберите регион">Выберите регион</option>
+          <select  class="form-select" v-model="sender.region">
+            <option disabled value="Выберите регион">Выберите регион * </option>
             <option>Узбекистан</option>
             <option>Китай</option>
             <option>Таджикистан</option>
@@ -53,7 +53,7 @@
 
           <input
             type="text"
-            placeholder="Название улицы, дома и т.д. "
+            placeholder="Название улицы, дома и т.д. * "
           />
         </div>
       </div>
@@ -72,20 +72,20 @@
           <div class="form-receiver__body-country">
             <input
               type="text"
-              placeholder="Выберите страну"
+              placeholder="Выберите страну * "
             />
           </div>
           <div class="form-receiver__body-settings">
-            <select v-model="receiver.settings">
-              <option disabled value="Условия поставки">Условия поставки</option>
+            <select class="form-select" v-model="receiver.settings">
+              <option disabled value="Условия поставки">Условия поставки * </option>
               <option>EXW</option>
               <option>FOB</option>
               <option>CIP</option>
             </select>
           </div>
           <div class="form-receiver__body-methods">
-            <select v-model="receiver.methods">
-              <option disabled value="Способ доставки">Способ доставки</option>
+            <select class="form-select" v-model="receiver.methods">
+              <option disabled value="Способ доставки">Способ доставки * </option>
               <option>Узбекистан</option>
               <option>Китай</option>
               <option>Таджикистан</option>

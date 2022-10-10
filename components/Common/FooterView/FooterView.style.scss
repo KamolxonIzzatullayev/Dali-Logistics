@@ -1,0 +1,46 @@
+.c-co-footer {
+  background-color: #1e4382;
+
+  .footer {
+
+    &-menu {
+      border-bottom: 1px solid rgba($color: #fff, $alpha: 0.4);
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__nav {
+        &-list {
+          display: flex;
+          list-style: none;
+          li {
+            margin: 0 20px 0 0;
+
+            a {
+              color: white;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      &__social {
+        display: flex;
+
+        &-item {
+          background-color: white;
+          margin: 0 0.6rem 0 0;
+          padding: 0.5rem 0.6rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &-owner {
+        padding: 2rem 0 ;
+      color: rgba($color: #fff, $alpha: 0.6);
+      text-align: center;
+    }
+  }
+}

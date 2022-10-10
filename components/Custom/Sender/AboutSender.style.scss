@@ -47,6 +47,7 @@
           padding-right: 1rem;
     
           &__body {
+            
             &-country input,
             &-settings select,
             &-methods select {
@@ -54,12 +55,19 @@
                 padding: 1.5rem;
                 box-shadow: $box-shadow;
                 border-radius: 10px;
-                border: none;
                 margin: 1rem 1rem 1rem 0;
+                border: none;
     
                 &:focus {
                   outline: 1px solid rgba(236, 155, 0, 0.5);
                 }
+            }
+
+            &-methods {
+              padding-top: 1rem;
+              select {
+                margin-top: 0;
+              }
             }
     
           }

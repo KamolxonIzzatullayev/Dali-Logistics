@@ -12,6 +12,13 @@
     <FormView></FormView>
 
     <NewsView></NewsView>
+
+    <PartnersView></PartnersView>
+
+    <FAQView></FAQView>
+
+    <FooterView></FooterView>
+
   </div>
 </template>
 
@@ -21,9 +28,12 @@ import ExperienceView from "@/components/Layout/ExperienceView/ExperienceView.vu
 import OffersView from "@/components/Layout/OffersView/OffersView.vue";
 import FormView from "@/components/Layout/FormView/FormView.vue";
 import NewsView from "@/components/Layout/NewsView/NewsView.vue";
+import PartnersView from "@/components/Layout/PartnersView/PartnersView.vue";
+import FAQView from "@/components/Layout/FAQView/FAQView.vue";
+import FooterView from "../components/Common/FooterView/FooterView.vue";
 export default {
   name: "IndexPage",
-  components: { HeaderView, ExperienceView, OffersView, FormView, NewsView },
+  components: { HeaderView, ExperienceView, OffersView, FormView, NewsView, PartnersView, FAQView, FooterView },
 };
 </script>
 

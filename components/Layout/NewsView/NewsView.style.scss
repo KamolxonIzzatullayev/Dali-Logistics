@@ -1,5 +1,27 @@
-.carousel-item {
-    height: 200px;
-    width: 200px;
-    background-color: red;
+.c-l-news {
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 0 0.5rem;
+    flex: 1;
+
+    &-title {
+      font-weight: 700;
+      font-size: 21px;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+
+    &-text {
+      color: rgba(0, 0, 0, 0.5);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
 }

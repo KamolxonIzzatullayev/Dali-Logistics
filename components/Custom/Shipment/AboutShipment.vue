@@ -55,30 +55,30 @@
                 <div class="accordion-body__header d-flex flex-wrap">
                   <input
                     type="text"
-                    placeholder="Наименование"
+                    placeholder="Наименование * "
                     v-model="accordion.name"
                   />
                   <input
                     type="text"
-                    placeholder="Tип упаковки"
+                    placeholder="Tип упаковки * "
                     v-model="accordion.type"
                   />
                 </div>
                 <div class="accordion-body__body d-flex flex-wrap">
                   <div class="accordion-body__body-sizes d-flex flex-wrap">
-                    <input type="text" placeholder="Длина(cм)" />
-                    <input type="text" placeholder="Ширина(cм)" />
-                    <input type="text" placeholder="Высота(cм)" />
+                    <input type="text" placeholder="Длина(cм) * " />
+                    <input type="text" placeholder="Ширина(cм) * " />
+                    <input type="text" placeholder="Высота(cм) * " />
                   </div>
                   <div class="accordion-body__body-weights d-flex flex-wrap">
-                    <input type="text" placeholder="Обем еденицы(м3)" />
-                    <input type="text" placeholder="Вес еденицы(кг)" />
+                    <input type="text" placeholder="Обем еденицы(м3) * " />
+                    <input type="text" placeholder="Вес еденицы(кг) * " />
                   </div>
                 </div>
                 <div class="accordion-body__footer d-flex flex-wrap">
-                  <input type="text" placeholder="Количество" />
-                  <input type="text" placeholder="Обший обем(м3)" />
-                  <input type="text" placeholder="Обший весь" />
+                  <input type="text" placeholder="Количество * " />
+                  <input type="text" placeholder="Обший обем(м3) * " />
+                  <input type="text" placeholder="Обший весь * " />
                 </div>
               </div>
             </div>
