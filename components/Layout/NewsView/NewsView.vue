@@ -1,6 +1,6 @@
 <template>
   <div class="c-l-news">
-    <div class="container">
+    <div class="container-xxl">
       <h1 class="custom-headline">Полезные статьи</h1>
       <div class="cards-wrapper">
         <div class="card">

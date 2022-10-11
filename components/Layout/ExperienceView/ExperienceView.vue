@@ -1,6 +1,6 @@
 <template>
   <div class="c-l-experience">
-    <div class="container">
+    <div class="container-xxl">
       <div class="exp">
         <h1 class="custom-headline">Опыт работы компании</h1>
         <p class="exp-text text-center">

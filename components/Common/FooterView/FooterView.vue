@@ -1,6 +1,6 @@
 <template>
   <div class="c-co-footer">
-    <div class="container">
+    <div class="container-xxl">
       <div class="footer">
         <div class="footer-menu">
           <div class="footer-menu__logo">

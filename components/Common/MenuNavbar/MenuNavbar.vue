@@ -1,7 +1,7 @@
 <template>
   <div class="c-cu-menu">
     <div class="menu">
-      <div class="container">
+      <div class="container-xxl">
         <div class="menu-navbar">
           <div class="menu-navbar__logo">
             <router-link to="/"
@@ -10,10 +10,10 @@
           </div>
           <ul class="menu-navbar__list">
             <li class="menu-navbar__list-item">
-              <a class="menu-navbar__list-item-link" href="#">О компании</a>
+              <nuxt-link class="menu-navbar__list-item-link" to="/about">О компании</nuxt-link>
             </li>
             <li class="menu-navbar__list-item">
-              <a class="menu-navbar__list-item-link" href="#">Услуги </a>
+              <nuxt-link class="menu-navbar__list-item-link" to="/offers">Услуги</nuxt-link>
             </li>
             <li class="menu-navbar__list-item">
               <a class="menu-navbar__list-item-link" href="#">

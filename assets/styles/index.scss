@@ -9,8 +9,10 @@ select:focus {
   outline: none;
 }
 
-.v-home {
-  .home-header {
+.p-home,
+.p-about {
+  .home-header,
+  .about-header {
     position: relative;
   }
 

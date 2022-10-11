@@ -1,6 +1,6 @@
 <template>
   <div class="c-cu-navbar">
-    <div class="container">
+    <div class="container-xxl">
       <div class="navbar-header d-flex justify-content-end">
         <nav>
           <ul class="navbar-header__list">

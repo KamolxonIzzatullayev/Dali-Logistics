@@ -1,0 +1,20 @@
+.c-l-cards {
+  padding: 4rem 0;
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: none;
+
+    a {
+      width: 100%;
+      background: #ffc258;
+      border-radius: 15px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      border: none;
+      color: #000000;
+      padding: 1rem 0;
+    }
+  }
+}

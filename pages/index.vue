@@ -1,8 +1,8 @@
 <template>
-  <div class="v-home">
+  <div class="p-home">
     <div class="home-header">
       <div class="bg"></div>
-      <HeaderView></HeaderView>
+      <HeaderView :bg-href="bgHref" :title="title" :path="path"></HeaderView>
     </div>
 
     <ExperienceView></ExperienceView>
@@ -18,7 +18,6 @@
     <FAQView></FAQView>
 
     <FooterView></FooterView>
-
   </div>
 </template>
 
@@ -33,10 +32,26 @@ import FAQView from "@/components/Layout/FAQView/FAQView.vue";
 import FooterView from "../components/Common/FooterView/FooterView.vue";
 export default {
   name: "IndexPage",
-  components: { HeaderView, ExperienceView, OffersView, FormView, NewsView, PartnersView, FAQView, FooterView },
+  components: {
+    HeaderView,
+    ExperienceView,
+    OffersView,
+    FormView,
+    NewsView,
+    PartnersView,
+    FAQView,
+    FooterView,
+  },
+  data() {
+    return {
+      bgHref: "headerBackground",
+      title: "Oт желания к реальности",
+      path: "",
+    };
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/assets/styles/index.scss";
 </style>

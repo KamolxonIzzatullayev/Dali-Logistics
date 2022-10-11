@@ -1,6 +1,6 @@
 <template>
   <div class="c-l-offers">
-    <div class="container">
+    <div class="container-xxl">
       <h1 class="custom-headline">Что мы предлагаем нашим клиентам</h1>
 
         <OffersTab></OffersTab>

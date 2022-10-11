@@ -1,6 +1,6 @@
 <template>
   <div class="c-l-form">
-    <div class="container">
+    <div class="container-xxl">
       <h1 class="custom-headline">Заполните заявка</h1>
       <AboutSender></AboutSender>
       <AboutShipment></AboutShipment>

@@ -1,17 +1,41 @@
 .c-l-header {
-  
-  background: url("~/assets/images/headerBackground.png");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   padding-top: 1rem;
   position: relative;
 
-  h1 {
+  .active {
     position: relative;
     z-index: 2;
     color: white;
     text-align: center;
-    padding: 6rem 0 8rem 0;
+    padding: 6rem 0 10rem 0;
+    font-weight: 700;
+    font-size: 77.3279px;
+    line-height: 94px;
   }
+
+  .another {
+    padding: 6rem 0 1rem 0;
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 77.3279px;
+    line-height: 94px;
+  }
+
+  p {
+    position: relative;
+    padding: 0 0 8rem 0;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
+
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="c-l-faq">
-    <div class="container">
+    <div class="container-xxl">
       <h1 class="custom-headline">Часто задаваемые вопросы</h1>
 
       <div class="faq">
