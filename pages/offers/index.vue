@@ -6,6 +6,7 @@
         :title="title"
         :path="path"
         :bg-href="background"
+        :link="link"
       ></HeaderView>
     </div>
 
@@ -30,6 +31,7 @@ export default {
       title: "Наши услуги",
       path: "УСЛУГИ",
       background: "offer-bg",
+      link: "/offers"
     };
   },
 };

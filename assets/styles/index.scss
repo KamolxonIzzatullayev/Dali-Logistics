@@ -10,9 +10,11 @@ select:focus {
 }
 
 .p-home,
-.p-about {
+.p-about,
+.p-offers {
   .home-header,
-  .about-header {
+  .about-header,
+  .offers-header {
     position: relative;
   }
 
@@ -32,4 +34,17 @@ h1.custom-headline {
   font-size: 40px;
   line-height: 150%;
   text-align: center;
+}
+
+.offers-component {
+  padding: 4rem 0;
+
+  &__image {
+    height: 50vh;
+  }
+
+  &__title {
+    margin: 4rem 0;
+  }
+
 }

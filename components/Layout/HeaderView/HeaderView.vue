@@ -16,7 +16,7 @@
 
     <p v-if="path">
       <nuxt-link to="/">ГЛАВНАЯ</nuxt-link> /
-      <nuxt-link :to="currentPath">{{ path }}</nuxt-link>
+      <nuxt-link :to="link">{{ path }}</nuxt-link>
     </p>
 
     <SearchField></SearchField>
@@ -39,16 +39,14 @@ export default {
     bgHref: {
       type: String,
     },
+    link: {
+      type: String,
+    },
   },
   components: {
     MenuNavbar,
     NavbarHeader,
     SearchField,
-  },
-  computed: {
-    currentPath() {
-      return $nuxt.$route.path.slice(1);
-    },
   },
 };
 </script>

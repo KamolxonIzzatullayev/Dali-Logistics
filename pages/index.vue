@@ -1,8 +1,13 @@
 <template>
-  <div class="p-home">
+  <div class="p-home" style="background-color: #f5f5f5">
     <div class="home-header">
       <div class="bg"></div>
-      <HeaderView :bg-href="bgHref" :title="title" :path="path"></HeaderView>
+      <HeaderView
+        :bg-href="bgHref"
+        :title="title"
+        :path="path"
+        :link="link"
+      ></HeaderView>
     </div>
 
     <ExperienceView></ExperienceView>
@@ -47,6 +52,7 @@ export default {
       bgHref: "headerBackground",
       title: "Oт желания к реальности",
       path: "",
+      link: "/",
     };
   },
 };

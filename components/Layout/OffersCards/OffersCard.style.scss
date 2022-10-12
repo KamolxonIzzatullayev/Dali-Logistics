@@ -1,9 +1,26 @@
 .c-l-cards {
   padding: 4rem 0;
+  .card-wrapper {
+    display: flex;
+
+    &__item {
+      &-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+   
   .card {
     background: #ffffff;
     border-radius: 20px;
     border: none;
+    overflow: hidden;
+
+    p {
+      margin-bottom: 3rem;
+    }
 
     a {
       width: 100%;

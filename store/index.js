@@ -4,50 +4,58 @@ export const state = () => ({
         {
             id: 1,
             title: "Авиаперевозки",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: true,
+            desc: ""
         },
         {
             id: 2,
             title: "Автоперевозки",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
         {
             id: 3,
             title: "Железнодорожные перевозки",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
         {
             id: 4,
             title: "Морские перевозки",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
         {
             id: 5,
             title: "Складские услуги",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
         {
             id: 6,
             title: "Экспедирование",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
         {
             id: 7,
             title: "Оформление таможенных деклараций",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
         {
             id: 8,
             title: "Перевозка опасных грузов",
-            bgImage: "",
+            bgImage: "offer-card",
             isActive: false,
+            desc: ""
         },
     ],
 })

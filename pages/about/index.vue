@@ -6,6 +6,7 @@
         :title="title"
         :path="path"
         :bg-href="background"
+        :link="link"
       ></HeaderView>
     </div>
 
@@ -31,13 +32,14 @@ export default {
     FooterView,
     AboutCompanyView,
     OurTarget,
-    OurTeam
-},
+    OurTeam,
+  },
   data() {
     return {
       title: "О компании",
       path: "О КОМПАНИИ",
       background: "about-bg",
+      link: "/about",
     };
   },
 };

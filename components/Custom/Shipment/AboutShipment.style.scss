@@ -40,11 +40,14 @@
       &-item {
         border: none;
         margin: 1rem 0;
+        background-color: #f5f5f5;
       }
       input {
         border: none;
         margin-bottom: 2rem;
         border-bottom: 1px solid rgba(70, 70, 70, 0.3);
+        background-color: #f5f5f5;
+
       }
 
       &-header {
@@ -199,6 +202,8 @@
               margin-bottom: 1rem;
               border: none;
               border-bottom: 1px solid rgba(70, 70, 70, 0.3);
+              background-color: #f5f5f5;
+
               
             }
           }
@@ -218,6 +223,8 @@
           width: 100%;
           border: none;
           border-bottom: 1px solid rgba(70, 70, 70, 0.3);
+          background-color: #f5f5f5;
+
         }
       }
 
