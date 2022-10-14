@@ -2,7 +2,7 @@
   <div class="c-cu-shipment">
     <div class="shipment">
       <h2 class="shipment-headline">Данные о посылке</h2>
-      <div class="shipment-head">
+      <div class="shipment-head row">
         <div class="shipment-head__add">
           <input
             type="radio"
@@ -25,62 +25,37 @@
         </div>
       </div>
       <div v-if="product == 'adding'" class="shipment-body">
-        <div class="accordion" id="accordionExample">
+        <div class="shipment-body__header">
+          <div class="shipment-body__header-item">Наименование</div>
+          <div class="shipment-body__header-item">Tип упаковки</div>
+          <div class="shipment-body__header-item">Количество</div>
+          <div class="shipment-body__header-item">Обший обем(м3)</div>
+          <div class="shipment-body__header-item">Обший весь</div>
+          <div class="shipment-body__header-action"></div>
+        </div>
+        <div class="shipment-body__body">
           <div
-            class="accordion-item"
-            v-for="(accordion, index) in accordions"
+            v-for="(item, index) in accordions"
             :key="index"
+            class="shipment-body__body-item"
           >
-            <h2 class="accordion-header" :id="`heading${index}`">
-              <button
-                class="accordion-button"
-                :class="index == 0 ? '' : 'collapsed'"
-                type="button"
-                data-bs-toggle="collapse"
-                :data-bs-target="`#collapse${index}`"
-                :aria-expanded="index == 0 ? true : false"
-                :aria-controls="`collapse${index}`"
-              >
-                {{ accordion.name ? accordion.name : "Одежды" }}
-              </button>
-            </h2>
-            <div
-              :id="`collapse${index}`"
-              class="accordion-collapse collapse"
-              :class="index == 0 ? 'show' : ''"
-              :aria-labelledby="`heading${index}`"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <div class="accordion-body__header d-flex flex-wrap">
-                  <input
-                    type="text"
-                    placeholder="Наименование * "
-                    v-model="accordion.name"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Tип упаковки * "
-                    v-model="accordion.type"
-                  />
-                </div>
-                <div class="accordion-body__body d-flex flex-wrap">
-                  <div class="accordion-body__body-sizes d-flex flex-wrap">
-                    <input type="text" placeholder="Длина(cм) * " />
-                    <input type="text" placeholder="Ширина(cм) * " />
-                    <input type="text" placeholder="Высота(cм) * " />
-                  </div>
-                  <div class="accordion-body__body-weights d-flex flex-wrap">
-                    <input type="text" placeholder="Обем еденицы(м3) * " />
-                    <input type="text" placeholder="Вес еденицы(кг) * " />
-                  </div>
-                </div>
-                <div class="accordion-body__footer d-flex flex-wrap">
-                  <input type="text" placeholder="Количество * " />
-                  <input type="text" placeholder="Обший обем(м3) * " />
-                  <input type="text" placeholder="Обший весь * " />
-                </div>
-              </div>
+            <div class="shipment-body__body-item-input">
+              <input type="text" />
+            </div>
+            <div class="shipment-body__body-item-input">
+              <input type="text" />
+            </div>
+            <div class="shipment-body__body-item-input">
+              <input type="text" />
+            </div>
+            <div class="shipment-body__body-item-input">
+              <input type="text" />
+            </div>
+            <div class="shipment-body__body-item-input">
+              <input type="text" />
+            </div>
+            <div class="shipment-body__body-item-action">
+              <button>-</button>
             </div>
           </div>
         </div>
@@ -102,24 +77,8 @@
         </button>
       </div>
       <div class="shipment-footer">
-        <div v-if="product == 'adding'" class="shipment-footer__all">
-          <div class="shipment-footer__all-sum">
-            <h4>Итог</h4>
-            <div class="inputs">
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
-            </div>
-          </div>
-          <div class="shipment-footer__all-add">
-            <button @click="addShipment">
-              <img src="../../../assets/icons/bx-plus.svg" alt="plus icon" />
-            </button>
-          </div>
-        </div>
         <div class="shipment-footer__comment">
-          <h4>Комментарии к продукту</h4>
-          <input type="text" />
+          <textarea cols="30" rows="4" placeholder="Комментарии"></textarea>
         </div>
         <div class="shipment-footer__submit">
           <div class="shipment-footer__submit-accept">

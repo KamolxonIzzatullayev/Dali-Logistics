@@ -3,7 +3,7 @@
     class="c-l-header"
     :style="{
       backgroundImage: `url(${require(`@/assets/images/${bgHref}.png`)})`,
-      backgroundPosition: currentPath == '' ? 'top' : 'center',
+      backgroundPosition: path == '' ? 'top' : 'center',
     }"
   >
     <NavbarHeader></NavbarHeader>

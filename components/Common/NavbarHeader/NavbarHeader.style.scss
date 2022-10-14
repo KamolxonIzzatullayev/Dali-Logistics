@@ -26,4 +26,112 @@
       }
     }
   }
+
+  .modal {
+    &-content {
+      border-radius: 10px;
+    }
+
+    &-header {
+      border-bottom: none;
+    }
+    &-body {
+      margin: 0 2rem;
+      &__header {
+        &-title {
+          text-align: center;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 150%;
+        }
+        &-logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+
+        &-text {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 150%;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      &__body {
+        .input-group {
+          box-shadow: -4px 4px 8px rgba(221, 222, 226, 0.2),
+            4px -4px 8px rgba(221, 222, 226, 0.2),
+            -4px -4px 8px rgba(255, 255, 255, 0.9),
+            4px 4px 10px rgba(221, 222, 226, 0.9),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+            inset -1px -1px 2px rgba(221, 222, 226, 0.5);
+          border-radius: 10px;
+          border: none;
+          padding: 0.5rem 0;
+
+          input {
+            border: none;
+            height: 100%;
+
+            &::placeholder {
+              color: rgba(0, 0, 0, 0.3);
+            }
+
+            &:focus {
+              box-shadow: none;
+            }
+          }
+
+          span {
+            background-color: transparent;
+            border: none;
+          }
+        }
+
+        label {
+          color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    &-footer {
+      margin: 0 2rem 2rem 2rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-top: none;
+
+      button {
+        width: 100%;
+        padding: 1.5rem 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        background: #ffc258;
+        border-radius: 20px;
+        border: none;
+        color: #000;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      p {
+        color: rgba(0, 0, 0, 0.2);
+        a {
+          color: #ffc258;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .c-cu-navbar {
+    display: none;
+  }
 }

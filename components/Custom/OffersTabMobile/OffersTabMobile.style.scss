@@ -1,0 +1,86 @@
+.c-cu-offers-mobile {
+    display: none;
+    margin: 2rem 0 0 0;
+
+  .offers {
+    overflow-x: scroll;
+    display: flex;
+    align-items: stretch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tabs-card {
+      display: flex;
+      width: 260px;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      background: white;
+      border-radius: 20px;
+      margin-right: 2rem;
+      transition: all 0.3s ease-in;
+
+      &__img {
+        img {
+          border-radius: 50%;
+          width: 3rem;
+          height: 3rem;
+          border: 3px solid white;
+          transition: all 0.3s ease-in;
+        }
+      }
+
+      &__title h2 {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 150%;
+        transition: all 0.3s ease-in;
+      }
+
+      &__desc {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 200%;
+
+        transition: all 0.3s ease-in;
+      }
+
+      &__submit {
+        button {
+          width: 100%;
+          padding: 1rem auto;
+          border: none;
+          background: #ffc258;
+          border-radius: 8px;
+
+          a {
+            color: black;
+            font-size: 10px;
+            line-height: 150%;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: #1e4382;
+        h2,
+        p {
+          color: white;
+        }
+
+        img {
+          border: 3px solid #ffc258;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .c-cu-offers-mobile {
+    display: block;
+  }
+}

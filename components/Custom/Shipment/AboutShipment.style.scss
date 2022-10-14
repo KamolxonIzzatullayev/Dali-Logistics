@@ -36,121 +36,62 @@
       }
     }
 
-    .accordion {
-      &-item {
-        border: none;
-        margin: 1rem 0;
-        background-color: #f5f5f5;
-      }
-      input {
-        border: none;
-        margin-bottom: 2rem;
-        border-bottom: 1px solid rgba(70, 70, 70, 0.3);
-        background-color: #f5f5f5;
-
-      }
-
-      &-header {
-        button {
-          background: transparent !important;
-          border-radius: 10px;
-          color: rgba(0, 0, 0, 0.3);
-          box-shadow: $box-shadow;
-          padding: 1.5rem;
-
-          &:not(&.collapsed) {
-            border: 1px solid rgba(236, 155, 0, 0.5);
-          }
-          &::after {
-            background-image: url('../../../assets/icons/bx-chevron-down.svg');
-          }
-        }
-      }
-
-      &-body {
+    &-body {
+      overflow-x: scroll;
+      &__header {
+        display: flex;
         padding: 1rem 0;
-        font-size: 14px;
-        &__header {
-          input {
-            flex: 1;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-            @media (max-width: 768px) {
-              flex: none;
-              width: 100%;
-            }
+        &-item {
+          flex: 3;
 
-            &:not(&:last-child) {
-              margin-right: 2rem;
-            }
-          }
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 150%;
         }
 
-        &__body {
-          &-sizes {
-            flex: 1;
-            margin-right: 2rem;
-            flex-wrap: wrap;
-
-            @media (max-width: 768px) {
-              flex: none;
-              width: 100%;
-            }
-
-            @media (max-width: 992px) {
-              flex: none;
-              width: 100%;
-            }
-
-            input {
-              flex: 1;
-              width: 30%;
-
-              &:not(&:last-child) {
-                margin-right: 1rem;
-              }
-
-              @media (max-width: 768px) {
-                flex: 1;
-                width: 100%;
-              }
-            }
-          }
-          &-weights {
-            flex: 1;
-            @media (max-width: 768px) {
-              flex: none;
-              width: 100%;
-            }
-            // @media (max-width: 992px) {
-            //   flex-direction: column;
-            //   justify-content: flex-start;
-            // }
-
-            input {
-              flex: 1;
-
-              &:not(&:last-child) {
-                margin-right: 1rem;
-              }
-
-              @media (max-width: 768px) {
-                margin-right: 0;
-              }
-            }
-          }
+        &-action {
+          flex: 1;
         }
+      }
 
-        &__footer {
-          input {
-            flex: 1;
-            &:not(&:last-child) {
-              margin-right: 1rem;
-            }
+      &__body {
+        &-item {
+          display: flex;
+          align-items: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-            @media (max-width: 768px) {
-              &:nth-child(2) {
-                margin-right: 0 !important;
+          &-input {
+            flex: 3;
+
+            input {
+              border: none;
+              box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
+                5px -5px 10px rgba(230, 230, 230, 0.2),
+                -5px -5px 10px rgba(255, 255, 255, 0.9),
+                5px 5px 13px rgba(230, 230, 230, 0.9),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+                inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+              border-radius: 10px;
+              padding: 0.5rem 0.4rem;
+
+              &:focus {
+                outline: 1px solid rgba(236, 155, 0, 0.5);
               }
+            }
+          }
+
+          &-action {
+            flex: 1;
+            button {
+              background: #ffc258;
+              border-radius: 5px;
+              border: none;
+              font-size: 2rem;
+              line-height: 1rem;
+              padding: 1rem 1.2rem;
             }
           }
         }
@@ -180,51 +121,24 @@
     }
 
     &-footer {
-      &__all {
-        margin: 1rem 0;
-        display: flex;
-        &-sum {
-          width: 100%;
-
-          h4 {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 22px;
-          }
-          .inputs {
-            display: flex;
-            @media (max-width: 768px) {
-              flex-wrap: wrap;
-            }
-            input {
-              flex: 1;
-              margin-right: 1rem;
-              margin-bottom: 1rem;
-              border: none;
-              border-bottom: 1px solid rgba(70, 70, 70, 0.3);
-              background-color: #f5f5f5;
-
-              
-            }
-          }
-        }
-        &-add {
-          button {
-            border: none;
-            background: #ffc258;
-            border-radius: 10px;
-            padding: 1rem;
-          }
-        }
-      }
       &__comment {
         margin: 3rem 0;
-        input {
+        textarea {
           width: 100%;
+          padding: 0.6rem 1.25rem;
           border: none;
-          border-bottom: 1px solid rgba(70, 70, 70, 0.3);
-          background-color: #f5f5f5;
-
+          resize: none;
+          background: #f6f7fb;
+          box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
+            5px -5px 10px rgba(230, 230, 230, 0.2),
+            -5px -5px 10px rgba(255, 255, 255, 0.9),
+            5px 5px 13px rgba(230, 230, 230, 0.9),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+            inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+          border-radius: 10px;
+          &:focus {
+            outline: 1px solid #faba3f;
+          }
         }
       }
 
@@ -237,7 +151,8 @@
           flex-direction: column-reverse;
           justify-content: center;
 
-          label, input {
+          label,
+          input {
             margin-top: 1rem;
             text-align: center;
           }
@@ -250,7 +165,6 @@
           button {
             width: 100%;
           }
-
         }
 
         input:checked {
@@ -260,10 +174,10 @@
         input:focus {
           box-shadow: none;
         }
-        
+
         button {
           border: none;
-          background: #FFC258;
+          background: #ffc258;
           border-radius: 8px;
           font-weight: 500;
           font-size: 18px;

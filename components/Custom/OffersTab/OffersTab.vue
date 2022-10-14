@@ -9,18 +9,29 @@
           @click="makeTab(header.id)"
           :class="header.isActive ? 'active' : ''"
         >
-          {{ header.title }}
+          <img :src="require(`@/assets/images/${header.bgImage}.png`)" alt="" />
+          <span>{{ header.title }}</span>
         </li>
       </ul>
     </div>
     <div class="tab-panels">
-      <h1 class="text-center">{{ activeTabPanel.title }}</h1>
+      <img
+        :src="require(`@/assets/images/${activeTabPanel.bgImage}.png`)"
+        alt=""
+      />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
+        perferendis sequi tenetur a in recusandae repudiandae nobis repellendus
+        eveniet dolores aut ullam soluta eos aliquid magni quas.
+      </p>
+      <button>Заказать</button>
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {};

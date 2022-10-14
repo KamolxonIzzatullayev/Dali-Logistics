@@ -10,11 +10,18 @@
           </div>
           <div class="footer-menu__nav">
             <ul class="footer-menu__nav-list">
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Услуги </a></li>
-              <li><a href="#">Наши преимущества</a></li>
-              <li><a href="#">Блог</a></li>
-              <li><a href="#">Нам доверяют</a></li>
+              <li>
+                <nuxt-link to="/about">О компании</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/offers">Услуги</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/blog">Блог</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/contacts">Контакты</nuxt-link>
+              </li>
             </ul>
           </div>
           <div class="footer-menu__social">

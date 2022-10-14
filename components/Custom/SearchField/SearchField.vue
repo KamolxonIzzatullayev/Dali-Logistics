@@ -1,6 +1,7 @@
 <template>
   <div class="c-co-search">
     <div class="search-field">
+      <img class="search-field__img" src="../../../assets/icons/input-search.svg" alt="" />
       <input
         type="text"
         class="search-field__input"

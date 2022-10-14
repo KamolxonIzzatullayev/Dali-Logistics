@@ -1,0 +1,125 @@
+.c-l-contact-question {
+  .contact {
+    margin: 8rem 0;
+
+    &-form {
+      padding: 0 6rem 0 0;
+
+      h1 {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 145%;
+        margin-bottom: 3rem;
+      }
+
+      .input-group {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        span {
+          background-color: transparent;
+          border: none;
+          border-radius: 10px 0 0 10px;
+          pointer-events: none;
+          user-select: none;
+          padding-right: 0;
+        }
+
+        input {
+          border-radius: 0 10px 10px 0;
+          border: none;
+          background-color: transparent;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        textarea {
+          background-color: transparent;
+          border-radius: 10px;
+          border: none;
+          resize: none;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        background-color: #ffc258;
+        padding: 1.5rem 0;
+        border: none;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        border-radius: 10px;
+      }
+    }
+
+    &-address {
+      padding: 2rem 3rem 0 3rem;
+      border-left: 1px solid rgba(123, 123, 125, 0.2);
+
+      &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+
+        &-text {
+          margin-left: 1rem;
+          h2 {
+            font-weight: 600;
+            font-size: 21px;
+            color: #ffc258;
+          }
+
+          p {
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    margin-bottom: 4rem;
+    border-radius: 10px;
+
+    .place-card {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    margin: 8rem 0 0 0 !important;
+
+    &-form {
+      padding: 0 !important;
+      h1 {
+        text-align: center;
+      }
+    }
+
+    &-address {
+      padding: 2rem 0 0 0 !important;
+      border: none !important;
+
+      &__item {
+        &-text {
+          margin-left: 0 !important;
+        }
+        &-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

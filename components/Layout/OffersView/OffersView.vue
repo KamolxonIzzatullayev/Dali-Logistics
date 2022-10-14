@@ -4,15 +4,18 @@
       <h1 class="custom-headline">Что мы предлагаем нашим клиентам</h1>
 
         <OffersTab></OffersTab>
-      
+
+        <OffersTabMobile></OffersTabMobile>
+
     </div>
   </div>
 </template>
 
 <script>
 import OffersTab from '@/components/Custom/OffersTab/OffersTab.vue';
+import OffersTabMobile from '@/components/Custom/OffersTabMobile/OffersTabMobile.vue';
 export default {
-    components: { OffersTab }
+    components: { OffersTab, OffersTabMobile }
 };
 </script>
 
