@@ -1,5 +1,6 @@
 <template>
   <div class="p-home" style="background-color: #f5f5f5">
+    <Axadxon></Axadxon>
     <div class="home-header">
       <div class="bg"></div>
       <HeaderView
@@ -27,13 +28,13 @@
 </template>
 
 <script>
-import HeaderView from "@/components/Layout/HeaderView/HeaderView.vue";
-import ExperienceView from "@/components/Layout/ExperienceView/ExperienceView.vue";
-import OffersView from "@/components/Layout/OffersView/OffersView.vue";
-import FormView from "@/components/Layout/FormView/FormView.vue";
-import NewsView from "@/components/Layout/NewsView/NewsView.vue";
-import PartnersView from "@/components/Layout/PartnersView/PartnersView.vue";
-import FAQView from "@/components/Layout/FAQView/FAQView.vue";
+import HeaderView from "../components/Layout/HeaderView/HeaderView.vue";
+import ExperienceView from "../components/Layout/ExperienceView/ExperienceView.vue";
+import OffersView from "../components/Layout/OffersView/OffersView.vue";
+import FormView from "../components/Layout/FormView/FormView.vue";
+import NewsView from "../components/Layout/NewsView/NewsView.vue";
+import PartnersView from "../components/Layout/PartnersView/PartnersView.vue";
+import FAQView from "../components/Layout/FAQView/FAQView.vue";
 import FooterView from "../components/Common/FooterView/FooterView.vue";
 export default {
   name: "IndexPage",
