@@ -1,0 +1,258 @@
+.c-cu-shipment {
+  .shipment {
+    &-headline {
+      margin-top: 2rem;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 150%;
+    }
+
+    &-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      input[type="radio"]:checked,
+      input[type="radio"]:checked + label {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &__add,
+      &__send {
+        flex: 1;
+        margin: 1rem 0;
+
+        @media (max-width: 768px) {
+          flex: none;
+        }
+      }
+    }
+
+    &-body {
+      overflow-x: auto;
+
+      &__header {
+        min-width: 1200px;
+        display: flex;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &-item {
+          flex: 3;
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 150%;
+        }
+
+        &-action {
+          flex: 1;
+        }
+      }
+
+      &__body {
+        min-width: 1200px;
+        &-item {
+          display: flex;
+          align-items: center;
+          padding: 1rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+          &-input {
+            flex: 3;
+
+            input {
+              background: #f6f7fb;
+              border: none;
+              box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
+                5px -5px 10px rgba(230, 230, 230, 0.2),
+                -5px -5px 10px rgba(255, 255, 255, 0.9),
+                5px 5px 13px rgba(230, 230, 230, 0.9),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+                inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+              border-radius: 10px;
+              padding: 0.5rem 0.4rem;
+
+              &:focus {
+                outline: 1px solid rgba(236, 155, 0, 0.5);
+              }
+            }
+          }
+
+          &-action {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            &.disabled {
+              button {
+                pointer-events: none;
+              }
+            }
+
+            button {
+              width: 3.2rem;
+              background: #ffc258;
+              color: white;
+              border-radius: 5px;
+              border: none;
+              font-size: 2rem;
+              line-height: 1rem;
+              padding: 1rem 1.2rem;
+            }
+          }
+        }
+      }
+
+      &__footer {
+        min-width: 1200px;
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+
+        &-item {
+          flex: 3;
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 150%;
+          display: flex;
+          align-items: center;
+          padding-right: 2rem;
+
+          input {
+            background: #f6f7fb;
+            border: none;
+            width: 100%;
+            box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
+              5px -5px 10px rgba(230, 230, 230, 0.2),
+              -5px -5px 10px rgba(255, 255, 255, 0.9),
+              5px 5px 13px rgba(230, 230, 230, 0.9),
+              inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+              inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+            border-radius: 10px;
+            padding: 0.5rem 0.4rem;
+
+            &:focus {
+              outline: 1px solid rgba(236, 155, 0, 0.5);
+            }
+          }
+        }
+
+        &-action {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          button {
+            width: 3.2rem;
+            background: #1e4382;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 2rem;
+            line-height: 1rem;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+
+    .sending {
+      input {
+        display: none;
+      }
+      button {
+        padding: 100px 0;
+        background: #f6f7fb;
+        border: 2px dashed rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &.active {
+        button {
+          border: 2px dashed #faba3f;
+        }
+      }
+    }
+
+    &-footer {
+      &__comment {
+        margin: 3rem 0;
+        textarea {
+          width: 100%;
+          padding: 0.6rem 1.25rem;
+          border: none;
+          resize: none;
+          background: #f6f7fb;
+          box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
+            5px -5px 10px rgba(230, 230, 230, 0.2),
+            -5px -5px 10px rgba(255, 255, 255, 0.9),
+            5px 5px 13px rgba(230, 230, 230, 0.9),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+            inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+          border-radius: 10px;
+          &:focus {
+            outline: 1px solid #faba3f;
+          }
+        }
+      }
+
+      &__submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 1.25rem;
+
+        .form-check-input {
+          border-radius: none !important;
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: column-reverse;
+          justify-content: center;
+          label,
+          input {
+            margin-top: 1rem;
+            text-align: center;
+          }
+
+          &-done {
+            width: 100%;
+            margin-left: -1.25rem;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+
+        input:checked {
+          background-color: #ec9b00;
+        }
+
+        input:focus {
+          box-shadow: none;
+        }
+
+        button {
+          border: none;
+          background: #ffc258;
+          border-radius: 8px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          padding: 1rem 2rem;
+        }
+      }
+    }
+  }
+}

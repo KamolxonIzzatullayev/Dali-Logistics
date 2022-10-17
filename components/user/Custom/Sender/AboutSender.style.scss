@@ -1,0 +1,145 @@
+@import "../../../../assets/styles/variables.scss";
+.c-cu-sender {
+  .form {
+    &-sender {
+      flex: 1;
+      padding-right: 1rem;
+
+      &__header {
+        label:first-of-type {
+          margin-right: 1rem;
+        }
+
+        input:last-of-type,
+        label:last-of-type {
+          display: none;
+        }
+      }
+
+      &__body {
+        &-email {
+          input {
+            width: 100%;
+            padding: 1.5rem;
+            box-shadow: $box-shadow;
+            border-radius: 10px;
+            border: none;
+            margin: 1rem 1rem 1rem 0;
+            background-color: #f5f5f5;
+
+            &:focus {
+              outline: 1px solid rgba(236, 155, 0, 0.5);
+            }
+          }
+        }
+        &-country {
+          display: flex;
+          select,
+          input {
+            flex: 1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            box-shadow: $box-shadow;
+            margin: 1rem 1rem 1rem 0;
+            background-color: #f5f5f5;
+
+            &:focus {
+              outline: 1px solid rgba(236, 155, 0, 0.5);
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &-receiver {
+      flex: 1;
+      padding-right: 1rem;
+
+      &__header {
+        .mobile-input {
+          display: none;
+        }
+      }
+
+      &__body {
+        &-country input,
+        &-settings select,
+        &-methods select {
+          width: 100%;
+          padding: 1.5rem;
+          box-shadow: $box-shadow;
+          border-radius: 10px;
+          margin: 1rem 1rem 1rem 0;
+          border: none;
+          background-color: #f5f5f5;
+
+          &:focus {
+            outline: 1px solid rgba(236, 155, 0, 0.5);
+          }
+        }
+
+        &-methods {
+          padding-top: 1rem;
+          select {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .c-cu-sender {
+    .form {
+      &-sender {
+        &.active {
+          display: block;
+        }
+        &.not-active {
+          display: none;
+        }
+
+        &__header {
+          input:last-of-type,
+          label:last-of-type {
+            display: inline;
+          }
+        }
+        &__body {
+          &-country:last-child {
+            display: block;
+          }
+        }
+        input:last-child,
+        select:last-of-type {
+          width: 100%;
+        }
+      }
+      &-receiver {
+        display: none;
+
+        &__header {
+          .mobile-input {
+            display: block;
+          }
+          .desktop-input {
+            display: none;
+          }
+        }
+
+        &.active {
+          display: block;
+        }
+        &.not-active {
+          display: none;
+        }
+      }
+    }
+  }
+}

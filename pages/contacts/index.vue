@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import HeaderView from "@/components/Layout/HeaderView/HeaderView.vue";
-import FooterView from "@/components/Common/FooterView/FooterView.vue";
-import ContactQuestion from "@/components/Layout/ContactQuestionView/ContactQuestion.vue";
+import HeaderView from "@/components/user/Layout/HeaderView/HeaderView.vue";
+import FooterView from "@/components/user/Common/FooterView/FooterView.vue";
+import ContactQuestion from "@/components/user/Layout/ContactQuestionView/ContactQuestion.vue";
 export default {
   components: {
     HeaderView,

@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import HeaderView from "@/components/Layout/HeaderView/HeaderView.vue";
-import FooterView from "@/components/Common/FooterView/FooterView.vue";
-import OffersCards from "../../components/Layout/OffersCards/OffersCards.vue";
+import HeaderView from "@/components/user/Layout/HeaderView/HeaderView.vue";
+import FooterView from "@/components/user/Common/FooterView/FooterView.vue";
+import OffersCards from "../../components/user/Layout/OffersCards/OffersCards.vue";
 export default {
   components: {
     HeaderView,

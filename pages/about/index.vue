@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import HeaderView from "@/components/Layout/HeaderView/HeaderView.vue";
-import FooterView from "@/components/Common/FooterView/FooterView.vue";
-import AboutCompanyView from "../../components/Layout/AboutCompanyView/AboutCompanyView.vue";
-import OurTarget from "../../components/Layout/OurTarget/OurTarget.vue";
-import OurTeam from "@/components/Layout/OurTeam/OurTeam.vue";
+import HeaderView from "@/components/user/Layout/HeaderView/HeaderView.vue";
+import FooterView from "@/components/user/Common/FooterView/FooterView.vue";
+import AboutCompanyView from "../../components/user/Layout/AboutCompanyView/AboutCompanyView.vue";
+import OurTarget from "../../components/user/Layout/OurTarget/OurTarget.vue";
+import OurTeam from "@/components/user/Layout/OurTeam/OurTeam.vue";
 export default {
   components: {
     HeaderView,

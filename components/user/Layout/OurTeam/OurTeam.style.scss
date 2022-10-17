@@ -1,0 +1,16 @@
+.c-l-team {
+  position: relative;
+  padding: 4rem 0 8rem 0;
+  h1 {
+    margin: 2rem 0 4rem 0;
+  }
+
+  .team-image {
+    background-image: url("../../../../assets/images/ourTeam.png");
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 12px;
+  }
+}
