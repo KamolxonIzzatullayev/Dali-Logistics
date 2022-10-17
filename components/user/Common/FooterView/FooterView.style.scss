@@ -1,5 +1,7 @@
 .c-co-footer {
   background-color: #1e4382;
+  z-index: 2;
+  position: relative;
 
   .footer {
     &-menu {
