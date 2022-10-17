@@ -1,5 +1,8 @@
 .c-l-cards {
   padding: 4rem 0;
+  z-index: 2;
+  position: relative;
+  
   .card-wrapper {
     display: flex;
 

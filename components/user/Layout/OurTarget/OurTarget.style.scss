@@ -1,10 +1,13 @@
 .c-l-target {
   margin: 2rem 0;
+  z-index: 2;
+  position: relative;
 
   .target {
     position: relative;
     &-text {
-      padding: 0 3rem;
+      padding: 3rem;
+      overflow-y: hidden;
 
       h1 {
         font-weight: 600;
@@ -98,5 +101,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .target-text::after {
+    display: none;
   }
 }
