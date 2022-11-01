@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.p-home,
+.p-about,
+.p-offers {
+  position: relative;
+  .home-header,
+  .about-header,
+  .offers-header {
+    position: relative;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #1e4382, $alpha: 0.8);
+    z-index: 1;
+  }
+}
+
+h1.custom-headline {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.offers-component {
+  padding: 4rem 0;
+
+  &__image {
+    height: 50vh;
+  }
+
+  &__title {
+    margin: 4rem 0;
+  }
+}
+
+.map {
+  margin: 5rem 2rem;
+  width: fit-content;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.rain {
+  max-width: 1320px;
+  width: 1320px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &-line {
+    width: 2px;
+    height: 100%;
+    background: hsla(0, 0%, 87%, 0.2);
+    position: relative;
+
+    &__drop {
+      position: absolute;
+      width: 3px;
+      height: 33px;
+      background-color: rgba(145, 155, 180, 0.9);
+      top: -10%;
+      animation: raining infinite 20s linear;
+    }
+
+    &:first-child span {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) span {
+      animation-delay: 5s;
+    }
+
+    &:nth-child(3) span {
+      animation-delay: 10s;
+    }
+
+    &:nth-child(4) span {
+      animation-delay: 15s;
+    }
+
+    &:nth-child(5) span {
+      animation-delay: 20s;
+    }
+
+  }
+}
+
+@media (max-width: 1320px) {
+  .rain{
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .rain{
+    display: none;
+  }
+}
+
+
+@keyframes raining {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}

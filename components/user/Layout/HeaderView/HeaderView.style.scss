@@ -1,0 +1,53 @@
+.c-l-header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 1rem;
+  position: relative;
+
+  .active {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 6rem 0 10rem 0;
+    font-weight: 700;
+    font-size: 77.3279px;
+    line-height: 94px;
+  }
+
+  .another {
+    padding: 6rem 0 1rem 0;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 77.3279px;
+    line-height: 94px;
+  }
+
+  p {
+    position: relative;
+    padding: 0 0 8rem 0;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .c-l-header {
+    h1 {
+      font-size: 2rem !important;
+      line-height: 2.5rem !important;
+      padding-bottom: 4rem !important;
+      padding-top: 4rem !important;
+    }
+  }
+}

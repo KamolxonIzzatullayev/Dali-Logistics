@@ -1,0 +1,111 @@
+.c-l-target {
+  margin: 2rem 0;
+  z-index: 2;
+  position: relative;
+
+  .target {
+    position: relative;
+    &-text {
+      padding: 3rem;
+      overflow-y: hidden;
+
+      h1 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #ffc258;
+        padding-bottom: 2rem;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "02";
+          font-weight: 600;
+          font-size: 90px;
+          line-height: 110px;
+          color: rgba(0, 0, 0, 0.03);
+          left: 0;
+          transform: translate(-50%, -40%);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 5%;
+          height: 5px;
+          background-color: #ffc258;
+          transform: translate(20%, 200%);
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.7);
+        margin: 2rem 0 4rem 0;
+      }
+
+      &::after {
+        content: "DALILOGISTIC";
+        word-break: keep-all;
+        font-weight: 700;
+        font-size: 188.49px;
+        line-height: 230px;
+        color: rgba(0, 0, 0, 0.02);
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+      }
+    }
+
+    &-footer {
+      position: relative;
+      padding: 8rem 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1e4382;
+        z-index: -1;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .c-l-target {
+    overflow: hidden;
+    .target {
+      &-text {
+        padding: 0;
+
+        h1 {
+          display: none;
+        }
+
+        p {
+          font-size: 14px;
+          text-align: center;
+          padding: 0;
+          margin: 2rem 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .target-text::after {
+    display: none;
+  }
+}

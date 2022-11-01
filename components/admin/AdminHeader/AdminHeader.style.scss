@@ -1,0 +1,107 @@
+.dashboard-header {
+  padding: 25px 36px;
+  background: #f8f8f8;
+  align-items: center;
+
+  &__search {
+    margin: 0 !important;
+    background: #fefefe;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    padding: 6px;
+
+    input {
+      padding: 1rem 25px;
+      border-radius: 10px 0 0 10px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      border: none;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    span {
+      border-radius: 0 10px 10px 0;
+      background: #fefefe;
+      border: none;
+      padding: 0;
+      margin-left: 0.4rem;
+      img {
+        padding: 12px;
+        background: #1e4382;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__notification,
+  &__chat,
+  &__profile {
+    button {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .profile {
+        margin-left: 4px;
+        padding-right: 2rem;
+
+        p {
+          margin: 0;
+          text-align: left;
+        }
+
+        &-name {
+          color: black;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+        }
+
+        &-role {
+          font-weight: 500;
+          font-size: 14.2857px;
+          line-height: 150%;
+          color: #a3a3a3;
+        }
+      }
+
+      &:focus {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      &:focus-visible {
+        box-shadow: none;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+  }
+}
