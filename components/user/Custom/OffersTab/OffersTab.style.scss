@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  z-index: 2;
+  position: relative;
 
   .tabs {
     width: 30%;
@@ -50,6 +52,8 @@
   }
 
   .tab-panels {
+    z-index: 2;
+    position: relative;
     width: 70%;
     height: 672px;
     overflow-y: auto;

@@ -1,4 +1,6 @@
 .c-l-news {
+  z-index: 2;
+  position: relative;
   &.blog {
     margin: 8rem 0;
   }
