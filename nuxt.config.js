@@ -43,7 +43,11 @@ export default {
   plugins: [
     {
       src: '~/static/plugins/owl.js', ssr: false
-    }
+    },
+    {
+      src: '~/static/plugins/phoneInput.js', ssr: false
+    },
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

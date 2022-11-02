@@ -55,21 +55,56 @@
         }
         &-phone {
           display: flex;
-          input {
+          &-index {
             flex: 1;
-            padding: 1.5rem;
+            input {
+              width: 100%;
+              padding: 1.5rem;
+              border-radius: 10px;
+              border: none;
+              box-shadow: $box-shadow;
+              margin: 1rem 1rem 1rem 0;
+              background-color: #f5f5f5;
+
+              &:focus {
+                outline: 1px solid rgba(236, 155, 0, 0.5);
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+          .vue-phone-number-input {
+            flex: 1;
+            display: flex;
+            margin: 1rem 1rem 1rem 0;
             border-radius: 10px;
             border: none;
             box-shadow: $box-shadow;
-            margin: 1rem 1rem 1rem 0;
-            background-color: #f5f5f5;
+          }
+          .country-selector {
+            height: 100%;
+
+            &__country-flag {
+              transform: translate(0, 70%);
+            }
+          }
+          .input-tel {
+            height: 100%;
+          }
+          .input-tel__label, .country-selector__label {
+            display: none;
+          }
+          .country-selector__input,
+          .input-tel__input {
+            background: transparent;
+            border: none;
+            height: 100%;
+            padding-top: 0 !important;
 
             &:focus {
-              outline: 1px solid rgba(236, 155, 0, 0.5);
-            }
-
-            &:last-child {
-              margin-right: 0;
+              border: none !important;
             }
           }
         }
@@ -89,21 +124,56 @@
       &__body {
         &-phone {
           display: flex;
-          input {
+          &-index {
             flex: 1;
-            padding: 1.5rem;
+            input {
+              width: 100%;
+              padding: 1.5rem;
+              border-radius: 10px;
+              border: none;
+              box-shadow: $box-shadow;
+              margin: 1rem 1rem 1rem 0;
+              background-color: #f5f5f5;
+
+              &:focus {
+                outline: 1px solid rgba(236, 155, 0, 0.5);
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+          .vue-phone-number-input {
+            flex: 1;
+            display: flex;
+            margin: 1rem 1rem 1rem 0;
             border-radius: 10px;
             border: none;
             box-shadow: $box-shadow;
-            margin: 1rem 1rem 1rem 0;
-            background-color: #f5f5f5;
+          }
+          .country-selector {
+            height: 100%;
+
+            &__country-flag {
+              transform: translate(0, 70%);
+            }
+          }
+          .input-tel {
+            height: 100%;
+          }
+          .input-tel__label, .country-selector__label {
+            display: none;
+          }
+          .country-selector__input,
+          .input-tel__input {
+            background: transparent;
+            border: none;
+            height: 100%;
+            padding-top: 0 !important;
 
             &:focus {
-              outline: 1px solid rgba(236, 155, 0, 0.5);
-            }
-
-            &:last-child {
-              margin-right: 0;
+              border: none !important;
             }
           }
         }

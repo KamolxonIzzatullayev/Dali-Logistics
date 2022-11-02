@@ -34,50 +34,73 @@
           </div>
         </div>
         <div class="form-sender__body-phone">
-          <input type="text" placeholder="93 490 32 18 * " />
-          <input type="text" placeholder="Почтовый индекс * " />
+          <vue-phone-number-input
+            v-model="senderPhoneNumber"
+            @input="results = $event"
+            v-bind="props"
+            color="#FFA300"
+          ></vue-phone-number-input>
+          <div class="form-sender__body-phone-index">
+            <input type="text" placeholder="Почтовый индекс * " />
+          </div>
         </div>
         <div class="form-sender__body-country">
-          <select class="form-select" v-model="sender.country">
+          <select
+            class="form-select"
+            v-model="sender.country"
+            @change="getSenderCitiesList"
+          >
             <option disabled value="Выберите страну">Выберите страну *</option>
             <option
-              :value="country"
-              v-for="(country, index) in sender.countries"
-              :key="index"
+              :value="country.id"
+              v-for="country in sender.countries"
+              :key="country.id"
             >
-              {{ country }}
+              {{ country.name }}
             </option>
           </select>
         </div>
         <div class="form-sender__body-country">
-          <select class="form-select" v-model="sender.city">
+          <select
+            class="form-select"
+            v-model="sender.city"
+            @change="getSenderRegionsList"
+          >
             <option disabled value="Выберите город">Выберите город *</option>
             <option
-              value=""
-              v-for="(city, index) in sender.cities[sender.country]"
-              :key="index"
+              :value="city.id"
+              v-for="city in sender.cities"
+              :key="city.id"
             >
-              {{ city }}
+              {{ city.name }}
             </option>
           </select>
           <select class="form-select" v-model="sender.region">
             <option disabled value="Выберите регион">Выберите регион *</option>
-            <option>Узбекистан</option>
-            <option>Китай</option>
-            <option>Таджикистан</option>
+            <option
+              :value="region.id"
+              v-for="region in sender.regions"
+              :key="region.id"
+            >
+              {{ region.name }}
+            </option>
           </select>
         </div>
         <div class="form-sender__body-country">
           <input type="text" placeholder="Название улицы, дома и т.д. * " />
         </div>
         <div class="form-receiver__body-settings">
-          <select class="form-select" v-model="receiver.settings">
+          <select class="form-select" v-model="sender.condition">
             <option disabled value="Условия поставки">
               Условия поставки *
             </option>
-            <option>EXW</option>
-            <option>FOB</option>
-            <option>CIP</option>
+            <option
+              :value="condition.id"
+              v-for="condition in conditions"
+              :key="condition.id"
+            >
+              {{ condition.name }}
+            </option>
           </select>
         </div>
       </div>
@@ -125,54 +148,77 @@
             <input type="text" placeholder="Электронная почта * " />
           </div>
           <div class="form-receiver__body-phone">
-            <input type="text" placeholder="93 490 32 18 * " />
-            <input type="text" placeholder="Почтовый индекс * " />
+            <vue-phone-number-input
+              color="#FFA300"
+              v-model="receiverPhoneNumber"
+              @update="results = $event"
+              v-bind="props"
+            ></vue-phone-number-input>
+            <div class="form-sender__body-phone-index">
+              <input type="text" placeholder="Почтовый индекс * " />
+            </div>
           </div>
           <div class="form-sender__body-country">
-            <select class="form-select" v-model="sender.country">
+            <select
+              class="form-select"
+              v-model="receiver.country"
+              @change="getReceiverCitiesList"
+            >
               <option disabled value="Выберите страну">
                 Выберите страну *
               </option>
               <option
-                :value="country"
-                v-for="(country, index) in sender.countries"
-                :key="index"
+                :value="country.id"
+                v-for="country in receiver.countries"
+                :key="country.id"
               >
-                {{ country }}
+                {{ country.name }}
               </option>
             </select>
           </div>
           <div class="form-sender__body-country">
-            <select class="form-select" v-model="sender.city">
+            <select
+              class="form-select"
+              v-model="receiver.city"
+              @change="getReceiverRegionsList"
+            >
               <option disabled value="Выберите город">Выберите город *</option>
               <option
-                value=""
-                v-for="(city, index) in sender.cities[sender.country]"
-                :key="index"
+                :value="city.id"
+                v-for="city in receiver.cities"
+                :key="city.id"
               >
-                {{ city }}
+                {{ city.name }}
               </option>
             </select>
-            <select class="form-select" v-model="sender.region">
+            <select class="form-select" v-model="receiver.region">
               <option disabled value="Выберите регион">
                 Выберите регион *
               </option>
-              <option>Узбекистан</option>
-              <option>Китай</option>
-              <option>Таджикистан</option>
+              <option
+                :value="region.id"
+                v-for="region in receiver.regions"
+                :key="region.id"
+              >
+                {{ region.name }}
+              </option>
             </select>
           </div>
           <div class="form-sender__body-country">
             <input type="text" placeholder="Название улицы, дома и т.д. * " />
           </div>
           <div class="form-receiver__body-methods">
-            <select class="form-select" v-model="receiver.methods">
+            <select class="form-select" v-model="receiver.method">
               <option disabled value="Способ доставки">
                 Способ доставки *
               </option>
-              <option>Узбекистан</option>
-              <option>Китай</option>
-              <option>Таджикистан</option>
+              <option
+                :value="method.id"
+                v-for="method in methods"
+                :key="method.id"
+              >
+                {{ method.name }}
+              </option>
             </select>
           </div>
         </div>
@@ -185,33 +231,136 @@
 export default {
   data() {
     return {
+      props: {
+        fetchCountry: true,
+        translations: {
+          phoneNumberLabel: "93 595 25 25",
+        },
+      },
+      receiverPhoneNumber: null,
+      senderPhoneNumber: null,
+      results: null,
       owner: "sender",
       sender: {
         country: "Выберите страну",
-        countries: ["Узбекистан", "Китай", "Таджикистан"],
+        countries: [],
         city: "Выберите город",
-        cities: {
-          Узбекистан: ["Ташкентская область", "Наманган", "Самарканд"],
-          Китай: ["Пекин", "Чунцин", "Шанхай"],
-          Таджикистан: ["Согд", "РПР", "Хатлон"],
-        },
+        cities: [],
         region: "Выберите регион",
+        regions: [],
+        condition: "Условия поставки",
       },
       receiver: {
         country: "Выберите страну",
+        countries: [],
+        city: "Выберите город",
+        cities: [],
         settings: "Условия поставки",
-        methods: "Способ доставки",
+        region: "Выберите регион",
+        regions: [],
+        method: "Способ доставки",
       },
+      conditions: [],
+      methods: [],
     };
   },
-  methods: {
-    loggingInfo() {
-      console.log(this.owner);
+  watch: {
+    countryList() {
+      this.setCountryList();
     },
+    senderCitiesList() {
+      this.setSenderCitiesList();
+    },
+    senderRegionsList() {
+      this.setSenderRegionsList();
+    },
+    conditionList() {
+      this.setConditionList();
+    },
+    receiverCitiesList() {
+      this.setReceiverCitiesList();
+    },
+    receiverRegionsList() {
+      this.setReceiverRegionsList();
+    },
+    methodList() {
+      this.setMethodList();
+    },
+  },
+  computed: {
+    countryList() {
+      return this.$store.getters["application/getCountryList"];
+    },
+    senderCitiesList() {
+      return this.$store.getters["application/getSenderCitiesList"];
+    },
+    senderRegionsList() {
+      return this.$store.getters["application/getSenderRegionsList"];
+    },
+    conditionList() {
+      return this.$store.getters["application/getConditionList"];
+    },
+    receiverCitiesList() {
+      return this.$store.getters["application/getReceiverCitiesList"];
+    },
+    receiverRegionsList() {
+      return this.$store.getters["application/getReceiverRegionsList"];
+    },
+    methodList() {
+      return this.$store.getters["application/getMethodList"];
+    },
+  },
+  methods: {
+    getData() {
+      this.$store.dispatch("application/getCountryList");
+      this.$store.dispatch("application/getConditionList");
+      this.$store.dispatch("application/getMethodList");
+    },
+    setCountryList() {
+      this.sender.countries = this.countryList.data;
+      this.receiver.countries = this.countryList.data;
+    },
+    getSenderCitiesList(e) {
+      this.$store.dispatch("application/getSenderCitiesList", e.target.value);
+    },
+    setSenderCitiesList() {
+      this.sender.cities = this.senderCitiesList.data;
+    },
+    getSenderRegionsList(e) {
+      this.$store.dispatch("application/getSenderRegionsList", e.target.value);
+    },
+    setSenderRegionsList() {
+      this.sender.regions = this.senderRegionsList.data;
+    },
+    setConditionList() {
+      this.conditions = this.conditionList.data;
+    },
+    getReceiverCitiesList(e) {
+      this.$store.dispatch("application/getReceiverCitiesList", e.target.value);
+    },
+    setReceiverCitiesList() {
+      this.receiver.cities = this.receiverCitiesList.data;
+    },
+    getReceiverRegionsList(e) {
+      this.$store.dispatch(
+        "application/getReceiverRegionsList",
+        e.target.value
+      );
+    },
+    setReceiverRegionsList() {
+      this.receiver.regions = this.receiverRegionsList.data;
+    },
+    setMethodList() {
+      this.methods = this.methodList.data;
+    },
+  },
+
+  mounted() {
+    this.getData();
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./AboutSender.style.scss";
 </style>
