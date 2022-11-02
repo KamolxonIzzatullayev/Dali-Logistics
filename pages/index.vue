@@ -10,8 +10,8 @@
     <div class="home-header">
       <div class="bg"></div>
       <HeaderView
-        :bg-href="bgHref"
-        :title="title"
+        :bg-href="bannerData.image"
+        :title="bannerData.name_en"
         :path="path"
         :link="link"
       ></HeaderView>
@@ -19,15 +19,15 @@
 
     <ExperienceView></ExperienceView>
 
-    <OffersView></OffersView>
+    <!-- <OffersView></OffersView> -->
 
     <FormView></FormView>
 
-    <NewsView></NewsView>
+    <!-- <NewsView></NewsView> -->
 
-    <PartnersView></PartnersView>
+    <PartnersView :partners="partners"></PartnersView>
 
-    <FAQView></FAQView>
+    <FAQView :faq="data.faqs"></FAQView>
 
     <FooterView></FooterView>
   </div>
@@ -54,13 +54,44 @@ export default {
     FAQView,
     FooterView,
   },
+
+  watch: {
+    indexPageData() {
+      this.getData();
+    },
+  },
+
   data() {
     return {
       bgHref: "headerBackground",
-      title: "Oт желания к реальности",
+      title: "",
       path: "",
       link: "/",
+      data: {},
+      bannerData: {
+        name_en: "",
+        image: "",
+      },
+      partners: []
     };
+  },
+
+  computed: {
+    indexPageData() {
+      return this.$store.getters["indexPage/getIndexPageData"];
+    },
+  },
+
+  methods: {
+    getData() {
+      this.data = this.indexPageData.data;
+      this.partners = this.data.partners
+      this.bannerData = this.data.banner;
+    },
+  },
+
+  mounted() {
+    this.$store.dispatch("indexPage/getIndexPageData");
   },
 };
 </script>

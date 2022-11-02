@@ -16,7 +16,7 @@
       </div>
       <div class="target-footer">
         <div class="container-xxl">
-          <img src="../../../../assets/images/targetFootImage.png" alt="" />
+          <img :src="imgHref" :alt="data.name_en ? data.name_en : ''" />
         </div>
       </div>
     </div>
@@ -24,7 +24,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    data: {
+      type: Object,
+    },
+  },
+
+  computed: {
+    imgHref() {
+      return process.env.baseUrl + this.data.image;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

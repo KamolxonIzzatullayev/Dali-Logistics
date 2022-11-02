@@ -9,6 +9,8 @@
     display: flex;
 
     &-questions {
+      z-index: 2;
+      position: relative;
       .accordion {
         &-item {
           background: transparent !important;
@@ -37,6 +39,8 @@
     }
 
     &-answer {
+      z-index: 2;
+      position: relative;
       padding: 0 0 5rem 5rem;
 
       &__card {

@@ -1,0 +1,122 @@
+.p-a-account {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 20px;
+
+  .account-header {
+    margin-bottom: 6rem;
+
+    &__background {
+      height: 450px;
+      background-image: url(../../../assets/images/admin/admin-account-bg.png);
+      background-position: center;
+      border-radius: 20px;
+      position: relative;
+
+      &-button {
+        background: rgba(38, 38, 38, 0.5);
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        color: white;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      input {
+        display: none;
+      }
+    }
+
+    &__personal {
+      display: flex;
+
+      &-photo {
+        img {
+          position: relative;
+          width: 175px;
+          border-radius: 50%;
+          margin-top: -40%;
+          z-index: 2;
+        }
+      }
+
+      &-data {
+        margin-left: 1rem;
+        margin-top: 1rem;
+
+        h1 {
+          font-weight: 600;
+          font-size: 30px;
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-left: 14px;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 150%;
+            background-color: #1e4382 !important;
+          }
+        }
+
+        h2 {
+          font-weight: 400;
+          font-size: 18px;
+
+          span {
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  .account-body {
+    &__tab {
+      ul {
+        padding: 0;
+        padding-left: 2rem;
+        display: flex;
+        list-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        li {
+          margin-right: 5rem;
+          padding: 0.5rem;
+          font-weight: 400;
+          font-size: 18px;
+          cursor: pointer;
+
+          &.active {
+            border-bottom: 2px solid #1e4382;
+            transition: all 0.4s linear;
+          }
+        }
+      }
+    }
+
+    &__tab-panels {
+      margin: 4rem 0;
+      padding-left: 2rem;
+
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 261%;
+
+          span {
+            color: #a3a3a3;
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   <div
     class="c-l-header"
     :style="{
-      backgroundImage: `url(${require(`@/assets/images/${bgHref}.png`)})`,
+      backgroundImage: `url(${imgHref})`,
       backgroundPosition: path == '' ? 'top' : 'center',
     }"
   >
@@ -47,6 +47,11 @@ export default {
     MenuNavbar,
     NavbarHeader,
     SearchField,
+  },
+  computed: {
+    imgHref() {
+      return process.env.baseUrl + this.bgHref;
+    },
   },
 };
 </script>

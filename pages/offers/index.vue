@@ -38,7 +38,7 @@ export default {
       title: "Наши услуги",
       path: "УСЛУГИ",
       background: "offer-bg",
-      link: "/offers"
+      link: "/offers",
     };
   },
 };

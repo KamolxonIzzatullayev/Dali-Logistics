@@ -27,8 +27,15 @@
         </div>
         <div class="form-sender__body">
           <div class="form-sender__body-email">
+            <input type="text" placeholder="Имя и фамилия * " />
+          </div>
+          <div class="form-sender__body-email">
             <input type="text" placeholder="Электронная почта * " />
           </div>
+        </div>
+        <div class="form-sender__body-phone">
+          <input type="text" placeholder="93 490 32 18 * " />
+          <input type="text" placeholder="Почтовый индекс * " />
         </div>
         <div class="form-sender__body-country">
           <select class="form-select" v-model="sender.country">
@@ -41,6 +48,8 @@
               {{ country }}
             </option>
           </select>
+        </div>
+        <div class="form-sender__body-country">
           <select class="form-select" v-model="sender.city">
             <option disabled value="Выберите город">Выберите город *</option>
             <option
@@ -51,16 +60,25 @@
               {{ city }}
             </option>
           </select>
-        </div>
-        <div class="form-sender__body-country">
           <select class="form-select" v-model="sender.region">
             <option disabled value="Выберите регион">Выберите регион *</option>
             <option>Узбекистан</option>
             <option>Китай</option>
             <option>Таджикистан</option>
           </select>
-
+        </div>
+        <div class="form-sender__body-country">
           <input type="text" placeholder="Название улицы, дома и т.д. * " />
+        </div>
+        <div class="form-receiver__body-settings">
+          <select class="form-select" v-model="receiver.settings">
+            <option disabled value="Условия поставки">
+              Условия поставки *
+            </option>
+            <option>EXW</option>
+            <option>FOB</option>
+            <option>CIP</option>
+          </select>
         </div>
       </div>
       <div
@@ -101,17 +119,51 @@
         </div>
         <div class="form-receiver__body">
           <div class="form-receiver__body-country">
-            <input type="text" placeholder="Выберите страну * " />
+            <input type="text" placeholder="Имя и фамилия * " />
           </div>
-          <div class="form-receiver__body-settings">
-            <select class="form-select" v-model="receiver.settings">
-              <option disabled value="Условия поставки">
-                Условия поставки *
+          <div class="form-receiver__body-country">
+            <input type="text" placeholder="Электронная почта * " />
+          </div>
+          <div class="form-receiver__body-phone">
+            <input type="text" placeholder="93 490 32 18 * " />
+            <input type="text" placeholder="Почтовый индекс * " />
+          </div>
+          <div class="form-sender__body-country">
+            <select class="form-select" v-model="sender.country">
+              <option disabled value="Выберите страну">
+                Выберите страну *
               </option>
-              <option>EXW</option>
-              <option>FOB</option>
-              <option>CIP</option>
+              <option
+                :value="country"
+                v-for="(country, index) in sender.countries"
+                :key="index"
+              >
+                {{ country }}
+              </option>
             </select>
+          </div>
+          <div class="form-sender__body-country">
+            <select class="form-select" v-model="sender.city">
+              <option disabled value="Выберите город">Выберите город *</option>
+              <option
+                value=""
+                v-for="(city, index) in sender.cities[sender.country]"
+                :key="index"
+              >
+                {{ city }}
+              </option>
+            </select>
+            <select class="form-select" v-model="sender.region">
+              <option disabled value="Выберите регион">
+                Выберите регион *
+              </option>
+              <option>Узбекистан</option>
+              <option>Китай</option>
+              <option>Таджикистан</option>
+            </select>
+          </div>
+          <div class="form-sender__body-country">
+            <input type="text" placeholder="Название улицы, дома и т.д. * " />
           </div>
           <div class="form-receiver__body-methods">
             <select class="form-select" v-model="receiver.methods">

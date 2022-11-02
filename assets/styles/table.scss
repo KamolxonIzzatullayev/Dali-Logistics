@@ -1,0 +1,105 @@
+.table {
+    padding: 2rem 0;
+
+    &-body {
+      margin-top: 2rem;
+      background: #fefefe;
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+
+        h1 {
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 150%;
+        }
+
+        button {
+          background: #01db17;
+          border-radius: 10px;
+          padding: 11px 2rem;
+          border: none;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          &:active {
+            background-color: #01db17;
+          }
+
+          &:focus-visible {
+            box-shadow: none;
+          }
+        }
+      }
+
+      table {
+        thead {
+          background: rgba(54, 160, 234, 0.1);
+
+          tr {
+            width: 100%;
+
+            th {
+              flex: 1;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 22px;
+              padding-left: 1rem;
+              width: max-content !important;
+            }
+          }
+        }
+
+        td {
+          padding: 1rem 0 1rem 1rem;
+          color: rgba(0, 0, 0, 0.5);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          vertical-align: middle;
+
+          .custom-btn {
+            border: 1px solid #0085ff;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #0085ff;
+            background-color: transparent;
+            padding: 9px 3rem;
+          }
+        }
+      }
+    }
+
+    &-footer {
+      ul {
+        li {
+          a {
+            border: none;
+            color: rgba(0, 0, 0, 0.5);
+            padding: 0.2rem 0.4rem;
+            &.active {
+              color: black;
+              background-color: transparent;
+              border-bottom: 1px solid #2d50c8;
+            }
+
+            &:hover &:not(:last-child, :first-child) {
+              background-color: transparent;
+              border-bottom: 1px solid #2d50c8;
+            }
+          }
+        }
+      }
+    }
+  }

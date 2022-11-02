@@ -10,16 +10,16 @@
     <div class="about-header">
       <div class="bg"></div>
       <HeaderView
-        :title="title"
+        :title="topBanner.name_en"
         :path="path"
-        :bg-href="background"
+        :bg-href="topBanner.image"
         :link="link"
       ></HeaderView>
     </div>
 
-    <AboutCompanyView> </AboutCompanyView>
+    <AboutCompanyView :data="data.about_title_images"></AboutCompanyView>
 
-    <OurTarget></OurTarget>
+    <OurTarget :data="data.banner_bottom"></OurTarget>
 
     <OurTeam></OurTeam>
 
@@ -41,13 +41,42 @@ export default {
     OurTarget,
     OurTeam,
   },
+
+  watch: {
+    aboutPageData() {
+      this.getData();
+    },
+  },
+
   data() {
     return {
       title: "О компании",
       path: "О КОМПАНИИ",
       background: "about-bg",
       link: "/about",
+      data: {},
+      topBanner: {
+        image: "",
+        name_en: "",
+      },
     };
+  },
+
+  methods: {
+    getData() {
+      this.data = this.aboutPageData.data;
+      this.topBanner = this.data.banner_top;
+    },
+  },
+
+  computed: {
+    aboutPageData() {
+      return this.$store.getters["aboutPage/getAboutPageData"];
+    },
+  },
+
+  mounted() {
+    this.$store.dispatch("aboutPage/getAboutPageData");
   },
 };
 </script>
