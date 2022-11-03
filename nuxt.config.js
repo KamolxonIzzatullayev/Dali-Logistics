@@ -42,10 +42,11 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {
-      src: '~/static/plugins/owl.js', ssr: false
+      src: '@/static/plugins/owl.js',
+      mode: 'client'
     },
     {
-      src: '~/static/plugins/phoneInput.js', ssr: false
+      src: '@/static/plugins/phoneInput.js', ssr: false
     },
 
   ],

@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import OwlCarousel from 'v-owl-carousel'
+import carousel from 'vue-owl-carousel'
  
-Vue.component('carousel', OwlCarousel)
+Vue.component('carousel', carousel)

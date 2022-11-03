@@ -16,7 +16,7 @@
       </div>
       <div class="target-footer">
         <div class="container-xxl">
-          <img :src="imgHref" :alt="data.name_en ? data.name_en : ''" />
+          <img :src="imgHref" alt="" />
         </div>
       </div>
     </div>

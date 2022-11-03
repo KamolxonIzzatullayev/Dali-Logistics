@@ -5,7 +5,8 @@ export const state = () => ({
     receiverCitiesList: {},
     receiverRegionsList: {},
     conditionList: {},
-    methodList: {}
+    methodList: {},
+    colliList: {}
 })
 export const getters = {
     getCountryList(state) { return state.countryList },
@@ -15,6 +16,7 @@ export const getters = {
     getReceiverCitiesList(state) { return state.receiverCitiesList },
     getReceiverRegionsList(state) { return state.receiverRegionsList },
     getMethodList(state) { return state.methodList },
+    getColliList(state) { return state.colliList },
 
 }
 export const mutations = {
@@ -38,6 +40,9 @@ export const mutations = {
     },
     SET_METHOD_LIST(state, data) {
         state.methodList = data;
+    },
+    SET_COLLI_LIST(state, data) {
+        state.colliList = data;
     },
 }
 export const actions = {
@@ -139,4 +144,20 @@ export const actions = {
             console.log(error);
         }
     },
+
+    async getColliList({ commit }) {
+        try {
+            this.$axios.get(`/dictionary/colli`)
+                .then((result) => {
+                    commit('SET_COLLI_LIST', result.data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
 }

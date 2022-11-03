@@ -27,10 +27,18 @@
         </div>
         <div class="form-sender__body">
           <div class="form-sender__body-email">
-            <input type="text" placeholder="Имя и фамилия * " />
+            <input
+              type="text"
+              v-model="sender.name"
+              placeholder="Имя и фамилия * "
+            />
           </div>
           <div class="form-sender__body-email">
-            <input type="text" placeholder="Электронная почта * " />
+            <input
+              v-model="sender.email"
+              type="text"
+              placeholder="Электронная почта * "
+            />
           </div>
         </div>
         <div class="form-sender__body-phone">
@@ -65,6 +73,7 @@
             class="form-select"
             v-model="sender.city"
             @change="getSenderRegionsList"
+            :disabled="!sender.cities.length"
           >
             <option disabled value="Выберите город">Выберите город *</option>
             <option
@@ -75,7 +84,11 @@
               {{ city.name }}
             </option>
           </select>
-          <select class="form-select" v-model="sender.region">
+          <select
+            class="form-select"
+            v-model="sender.region"
+            :disabled="!sender.regions.length"
+          >
             <option disabled value="Выберите регион">Выберите регион *</option>
             <option
               :value="region.id"
@@ -87,7 +100,11 @@
           </select>
         </div>
         <div class="form-sender__body-country">
-          <input type="text" placeholder="Название улицы, дома и т.д. * " />
+          <input
+            v-model="sender.address"
+            type="text"
+            placeholder="Название улицы, дома и т.д. * "
+          />
         </div>
         <div class="form-receiver__body-settings">
           <select class="form-select" v-model="sender.condition">
@@ -142,10 +159,18 @@
         </div>
         <div class="form-receiver__body">
           <div class="form-receiver__body-country">
-            <input type="text" placeholder="Имя и фамилия * " />
+            <input
+              v-model="receiver.name"
+              type="text"
+              placeholder="Имя и фамилия * "
+            />
           </div>
           <div class="form-receiver__body-country">
-            <input type="text" placeholder="Электронная почта * " />
+            <input
+              v-model="receiver.email"
+              type="text"
+              placeholder="Электронная почта * "
+            />
           </div>
           <div class="form-receiver__body-phone">
             <vue-phone-number-input
@@ -181,6 +206,7 @@
               class="form-select"
               v-model="receiver.city"
               @change="getReceiverRegionsList"
+              :disabled="!receiver.cities.length"
             >
               <option disabled value="Выберите город">Выберите город *</option>
               <option
@@ -191,7 +217,11 @@
                 {{ city.name }}
               </option>
             </select>
-            <select class="form-select" v-model="receiver.region">
+            <select
+              class="form-select"
+              v-model="receiver.region"
+              :disabled="!receiver.regions.length"
+            >
               <option disabled value="Выберите регион">
                 Выберите регион *
               </option>
@@ -205,7 +235,7 @@
             </select>
           </div>
           <div class="form-sender__body-country">
-            <input type="text" placeholder="Название улицы, дома и т.д. * " />
+            <input  type="text" placeholder="Название улицы, дома и т.д. * " />
           </div>
           <div class="form-receiver__body-methods">
             <select class="form-select" v-model="receiver.method">
@@ -229,6 +259,11 @@
 
 <script>
 export default {
+  props: {
+    changed: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
       props: {
@@ -286,6 +321,9 @@ export default {
     methodList() {
       this.setMethodList();
     },
+    isChanged() {
+      this.sendData();
+    },
   },
   computed: {
     countryList() {
@@ -308,6 +346,9 @@ export default {
     },
     methodList() {
       return this.$store.getters["application/getMethodList"];
+    },
+    isChanged() {
+      return this.changed;
     },
   },
   methods: {
@@ -352,6 +393,9 @@ export default {
     },
     setMethodList() {
       this.methods = this.methodList.data;
+    },
+    sendData() {
+      this.$emit("sender", this.sender, this.receiver);
     },
   },
 
