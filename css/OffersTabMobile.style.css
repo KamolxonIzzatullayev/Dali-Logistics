@@ -1,0 +1,72 @@
+.c-cu-offers-mobile {
+  display: none;
+  margin: 2rem 0 0 0;
+}
+.c-cu-offers-mobile .offers {
+  overflow-x: scroll;
+  display: flex;
+  align-items: stretch;
+}
+.c-cu-offers-mobile .offers::-webkit-scrollbar {
+  display: none;
+}
+.c-cu-offers-mobile .offers .tabs-card {
+  display: flex;
+  width: 260px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-radius: 20px;
+  margin-right: 2rem;
+  transition: all 0.3s ease-in;
+}
+.c-cu-offers-mobile .offers .tabs-card__img img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid white;
+  transition: all 0.3s ease-in;
+}
+.c-cu-offers-mobile .offers .tabs-card__title h2 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 150%;
+  transition: all 0.3s ease-in;
+}
+.c-cu-offers-mobile .offers .tabs-card__desc {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 200%;
+  transition: all 0.3s ease-in;
+}
+.c-cu-offers-mobile .offers .tabs-card__submit button {
+  width: 100%;
+  padding: 1rem auto;
+  border: none;
+  background: #ffc258;
+  border-radius: 8px;
+}
+.c-cu-offers-mobile .offers .tabs-card__submit button a {
+  color: black;
+  font-size: 10px;
+  line-height: 150%;
+  font-weight: 600;
+}
+.c-cu-offers-mobile .offers .tabs-card:hover {
+  background-color: #1e4382;
+}
+.c-cu-offers-mobile .offers .tabs-card:hover h2,
+.c-cu-offers-mobile .offers .tabs-card:hover p {
+  color: white;
+}
+.c-cu-offers-mobile .offers .tabs-card:hover img {
+  border: 3px solid #ffc258;
+}
+
+@media (max-width: 768px) {
+  .c-cu-offers-mobile {
+    display: block;
+  }
+}/*# sourceMappingURL=OffersTabMobile.style.css.map */

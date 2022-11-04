@@ -1,0 +1,98 @@
+.p-a-account {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 20px;
+}
+.p-a-account .account-header {
+  margin-bottom: 6rem;
+}
+.p-a-account .account-header__background {
+  height: 450px;
+  background-image: url(../../../assets/images/admin/admin-account-bg.png);
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+}
+.p-a-account .account-header__background-button {
+  background: rgba(38, 38, 38, 0.5);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.p-a-account .account-header__background input {
+  display: none;
+}
+.p-a-account .account-header__personal {
+  display: flex;
+}
+.p-a-account .account-header__personal-photo img {
+  position: relative;
+  width: 175px;
+  border-radius: 50%;
+  margin-top: -40%;
+  z-index: 2;
+}
+.p-a-account .account-header__personal-data {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.p-a-account .account-header__personal-data h1 {
+  font-weight: 600;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+.p-a-account .account-header__personal-data h1 span {
+  margin-left: 14px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 150%;
+  background-color: #1e4382 !important;
+}
+.p-a-account .account-header__personal-data h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.p-a-account .account-header__personal-data h2 span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.p-a-account .account-body__tab ul {
+  padding: 0;
+  padding-left: 2rem;
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.p-a-account .account-body__tab ul li {
+  margin-right: 5rem;
+  padding: 0.5rem;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+}
+.p-a-account .account-body__tab ul li.active {
+  border-bottom: 2px solid #1e4382;
+  transition: all 0.4s linear;
+}
+.p-a-account .account-body__tab-panels {
+  margin: 4rem 0;
+  padding-left: 2rem;
+}
+.p-a-account .account-body__tab-panels ul {
+  padding: 0;
+  list-style: none;
+}
+.p-a-account .account-body__tab-panels ul li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 261%;
+}
+.p-a-account .account-body__tab-panels ul li span {
+  color: #a3a3a3;
+}/*# sourceMappingURL=account.style.css.map */

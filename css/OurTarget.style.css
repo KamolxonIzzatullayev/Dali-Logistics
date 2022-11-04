@@ -1,0 +1,97 @@
+.c-l-target {
+  margin: 2rem 0;
+  z-index: 2;
+  position: relative;
+}
+.c-l-target .target {
+  position: relative;
+}
+.c-l-target .target-text {
+  padding: 3rem;
+  overflow-y: hidden;
+}
+.c-l-target .target-text h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffc258;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.c-l-target .target-text h1::before {
+  position: absolute;
+  content: "02";
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 110px;
+  color: rgba(0, 0, 0, 0.03);
+  left: 0;
+  transform: translate(-50%, -40%);
+}
+.c-l-target .target-text h1::after {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 5px;
+  background-color: #ffc258;
+  transform: translate(20%, 200%);
+}
+.c-l-target .target-text p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 2rem 0 4rem 0;
+}
+.c-l-target .target-text::after {
+  content: "DALILOGISTIC";
+  word-break: keep-all;
+  font-weight: 700;
+  font-size: 188.49px;
+  line-height: 230px;
+  color: rgba(0, 0, 0, 0.02);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.c-l-target .target-footer {
+  position: relative;
+  padding: 8rem 0;
+}
+.c-l-target .target-footer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e4382;
+  z-index: -1;
+}
+.c-l-target .target-footer img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .c-l-target {
+    overflow: hidden;
+  }
+  .c-l-target .target-text {
+    padding: 0;
+  }
+  .c-l-target .target-text h1 {
+    display: none;
+  }
+  .c-l-target .target-text p {
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    margin: 2rem 0 0 0;
+  }
+}
+@media (max-width: 1200px) {
+  .target-text::after {
+    display: none;
+  }
+}/*# sourceMappingURL=OurTarget.style.css.map */

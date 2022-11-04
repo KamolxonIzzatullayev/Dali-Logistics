@@ -1,0 +1,31 @@
+.c-l-news {
+  z-index: 2;
+  position: relative;
+}
+.c-l-news.blog {
+  margin: 8rem 0;
+}
+.c-l-news .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-l-news .card {
+  background-color: transparent;
+}
+.c-l-news .card img {
+  border-radius: 20px;
+}
+.c-l-news .card-title {
+  font-weight: 700;
+  font-size: 21px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.c-l-news .card-text {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}/*# sourceMappingURL=NewsView.style.css.map */

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.p-home,
+.p-about,
+.p-offers {
+  position: relative;
+}
+.p-home .home-header,
+.p-home .about-header,
+.p-home .offers-header,
+.p-about .home-header,
+.p-about .about-header,
+.p-about .offers-header,
+.p-offers .home-header,
+.p-offers .about-header,
+.p-offers .offers-header {
+  position: relative;
+}
+.p-home .bg,
+.p-about .bg,
+.p-offers .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 67, 130, 0.8);
+  z-index: 1;
+}
+
+h1.custom-headline {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.offers-component {
+  padding: 4rem 0;
+}
+.offers-component__image {
+  height: 50vh;
+}
+.offers-component__title {
+  margin: 4rem 0;
+}
+
+.map {
+  margin: 5rem 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.rain {
+  max-width: 1320px;
+  width: 1320px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.rain-line {
+  width: 2px;
+  height: 100%;
+  background: hsla(0deg, 0%, 87%, 0.2);
+  position: relative;
+}
+.rain-line__drop {
+  position: absolute;
+  width: 3px;
+  height: 33px;
+  background-color: rgba(145, 155, 180, 0.9);
+  top: -10%;
+  -webkit-animation: raining infinite 20s linear;
+          animation: raining infinite 20s linear;
+}
+.rain-line:first-child span {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.rain-line:nth-child(2) span {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.rain-line:nth-child(3) span {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+.rain-line:nth-child(4) span {
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+.rain-line:nth-child(5) span {
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+@media (max-width: 1320px) {
+  .rain {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .rain {
+    display: none;
+  }
+}
+@-webkit-keyframes raining {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes raining {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

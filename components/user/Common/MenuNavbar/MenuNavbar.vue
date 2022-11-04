@@ -13,7 +13,10 @@
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
-                <img src="../../../../assets/icons/input-user-white.svg" alt="" />
+                <img
+                  src="../../../../assets/icons/input-user-white.svg"
+                  alt=""
+                />
               </button>
               <button
                 class="navbar-toggler"
@@ -83,7 +86,11 @@
           <ul class="menu-navbar__list">
             <li class="menu-navbar__list-item">
               <nuxt-link class="menu-navbar__list-item-link" to="/about">
-                О компании
+                <img
+                  src="../../../../assets/icons/mobileMenu/manu-company.svg"
+                  alt=""
+                />
+                <span> О компании </span>
               </nuxt-link>
             </li>
             <li class="menu-navbar__list-item">
@@ -146,7 +153,10 @@
                   aria-describedby="basic-addon2"
                 />
                 <span class="input-group-text" id="basic-addon2">
-                  <img src="../../../../assets/icons/auth-email.svg" alt="email" />
+                  <img
+                    src="../../../../assets/icons/auth-email.svg"
+                    alt="email"
+                  />
                 </span>
               </div>
 

@@ -43,6 +43,16 @@
         <li><a class="dropdown-item" href="#">Something else here</a></li>
       </ul>
     </div>
+    <div class="btn-group dashboard-header__chat">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="../../../assets/images/usa-flag.svg" alt="" />
+      </button>
+    </div>
     <div class="dropdown dashboard-header__profile">
       <button
         class="btn btn-primary dropdown-toggle"
