@@ -37,6 +37,37 @@
           background: transparent;
         }
       }
+
+      .offcanvas {
+        background: #1e4382;
+
+        &-header {
+          padding: 32px 16px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+          button {
+            color: white !important;
+          }
+        }
+
+        .nav-item {
+          margin-top: 32px;
+
+          a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: baseline;
+
+            span {
+              margin-left: 10px;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
     }
   }
 

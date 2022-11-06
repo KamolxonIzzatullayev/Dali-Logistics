@@ -40,7 +40,7 @@
                 </router-link>
                 <button
                   type="button"
-                  class="btn-close"
+                  class="btn-close btn-close-white"
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
@@ -49,17 +49,29 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
                     <nuxt-link class="menu-navbar__list-item-link" to="/about">
-                      О компании
+                      <img
+                        src="@/assets/icons/mobileMenu/manu-company.svg"
+                        alt=""
+                      />
+                      <span> О компании </span>
                     </nuxt-link>
                   </li>
                   <li class="nav-item">
                     <nuxt-link class="menu-navbar__list-item-link" to="/offers">
-                      Услуги
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-settings.svg"
+                        alt=""
+                      />
+                      <span> Услуги </span>
                     </nuxt-link>
                   </li>
                   <li class="nav-item">
                     <nuxt-link class="menu-navbar__list-item-link" to="/blog">
-                      Блог
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-barchar.svg"
+                        alt=""
+                      />
+                      <span> Наши преимущества </span>
                     </nuxt-link>
                   </li>
 
@@ -68,7 +80,51 @@
                       class="menu-navbar__list-item-link"
                       to="/contacts"
                     >
-                      Контакты
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-blog.svg"
+                        alt=""
+                      />
+                      <span> Блог </span>
+                    </nuxt-link>
+                  </li>
+                  <li class="nav-item">
+                    <nuxt-link class="menu-navbar__list-item-link" to="/about">
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-partner.svg"
+                        alt=""
+                      />
+                      <span> Нам доверяют </span>
+                    </nuxt-link>
+                  </li>
+                  <li class="nav-item">
+                    <nuxt-link class="menu-navbar__list-item-link" to="/offers">
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-phone.svg"
+                        alt=""
+                      />
+                      <span> Контакты </span>
+                    </nuxt-link>
+                  </li>
+                  <li class="nav-item">
+                    <nuxt-link class="menu-navbar__list-item-link" to="/blog">
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-dictionary.svg"
+                        alt=""
+                      />
+                      <span> Справочник </span>
+                    </nuxt-link>
+                  </li>
+
+                  <li class="nav-item">
+                    <nuxt-link
+                      class="menu-navbar__list-item-link"
+                      to="/contacts"
+                    >
+                      <img
+                        src="@/assets/icons/mobileMenu/menu-flag-russia.svg"
+                        alt=""
+                      />
+                      <span> Русский </span>
                     </nuxt-link>
                   </li>
                 </ul>
@@ -86,15 +142,11 @@
           <ul class="menu-navbar__list">
             <li class="menu-navbar__list-item">
               <nuxt-link class="menu-navbar__list-item-link" to="/about">
-                <img
-                  src="../../../../assets/icons/mobileMenu/manu-company.svg"
-                  alt=""
-                />
-                <span> О компании </span>
+                О компании
               </nuxt-link>
             </li>
             <li class="menu-navbar__list-item">
-              <nuxt-link class="menu-navbar__list-item-link" to="/offers">
+              <nuxt-link class="menu-navbar__list-item" to="/offers">
                 Услуги
               </nuxt-link>
             </li>
