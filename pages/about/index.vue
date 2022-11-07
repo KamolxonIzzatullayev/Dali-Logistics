@@ -19,7 +19,7 @@
 
     <AboutCompanyView :data="data.about_title_images"></AboutCompanyView>
 
-    <OurTarget :data="data.banner_bottom"></OurTarget>
+    <OurTarget :data="banner_bottom"></OurTarget>
 
     <OurTeam></OurTeam>
 
@@ -59,6 +59,10 @@ export default {
         image: "",
         name_en: "",
       },
+      banner_bottom: {
+        image: "",
+        name_en: "",
+      },
     };
   },
 
@@ -66,6 +70,7 @@ export default {
     getData() {
       this.data = this.aboutPageData.data;
       this.topBanner = this.data.banner_top;
+      this.banner_bottom = this.data.banner_bottom
     },
   },
 

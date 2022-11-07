@@ -67,8 +67,10 @@
           &-input {
             flex: 3;
 
-            input {
-              background: #f6f7fb;
+            input,
+            select {
+              width: 80%;
+              background: #f5f5f5;
               border: none;
               box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
                 5px -5px 10px rgba(230, 230, 230, 0.2),
@@ -126,9 +128,9 @@
           padding-right: 2rem;
 
           input {
-            background: #f6f7fb;
+            width: 90%;
+            background: #f5f5f5;
             border: none;
-            width: 100%;
             box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
               5px -5px 10px rgba(230, 230, 230, 0.2),
               -5px -5px 10px rgba(255, 255, 255, 0.9),
@@ -192,7 +194,7 @@
           padding: 0.6rem 1.25rem;
           border: none;
           resize: none;
-          background: #f6f7fb;
+          background: #f5f5f5;
           box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2),
             5px -5px 10px rgba(230, 230, 230, 0.2),
             -5px -5px 10px rgba(255, 255, 255, 0.9),
@@ -203,6 +205,12 @@
           &:focus {
             outline: 1px solid #faba3f;
           }
+        }
+      }
+
+      &__warning {
+        &-text {
+          color: red;
         }
       }
 
@@ -245,12 +253,20 @@
 
         button {
           border: none;
-          background: #ffc258;
           border-radius: 8px;
           font-weight: 500;
           font-size: 18px;
           line-height: 22px;
           padding: 1rem 2rem;
+
+          &.notDone {
+            background-color: #faebd0;
+            pointer-events: none;
+          }
+
+          &.done {
+            background: #ffc258;
+          }
         }
       }
     }

@@ -1,18 +1,25 @@
 @import "../../../../assets/styles/variables.scss";
 .c-cu-sender {
   .form {
+
+    &-headline {
+      display: none;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 170%;
+    }
+
     &-sender {
       flex: 1;
       padding-right: 1rem;
 
       &__header {
+        display: flex;
+        div {
+          flex: 1;
+        }
         label:first-of-type {
           margin-right: 1rem;
-        }
-
-        input:last-of-type,
-        label:last-of-type {
-          display: none;
         }
       }
 
@@ -207,13 +214,11 @@
 @media (max-width: 768px) {
   .c-cu-sender {
     .form {
+      &-headline {
+        display: block;
+      }
+      display: block !important;
       &-sender {
-        &.active {
-          display: block;
-        }
-        &.not-active {
-          display: none;
-        }
 
         &__header {
           input:last-of-type,
@@ -232,7 +237,6 @@
         }
       }
       &-receiver {
-        display: none;
 
         &__header {
           .mobile-input {
@@ -241,13 +245,6 @@
           .desktop-input {
             display: none;
           }
-        }
-
-        &.active {
-          display: block;
-        }
-        &.not-active {
-          display: none;
         }
       }
     }

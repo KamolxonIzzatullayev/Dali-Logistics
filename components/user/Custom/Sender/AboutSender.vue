@@ -1,47 +1,61 @@
 <template>
   <div class="c-cu-sender">
+    <div class="form-sender__header">
+      <div>
+        <input
+          type="radio"
+          v-model="owner"
+          checked
+          name="personal"
+          value="sender"
+          id="sender"
+        />
+        <label for="sender">Отправитель</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          v-model="owner"
+          value="receiver"
+          name="personal"
+          id="receiver"
+        />
+        <label for="receiver">Грузополучатель</label>
+      </div>
+    </div>
     <div class="form d-flex">
-      <div
-        class="form-sender"
-        :class="owner == 'sender' ? 'active' : 'not-active'"
-      >
-        <div class="form-sender__header">
-          <input
-            type="radio"
-            v-model="owner"
-            checked
-            name="personal"
-            value="sender"
-            id="sender"
-          />
-          <label for="sender">Отправитель</label>
+      <div class="form-sender">
+        <h3 class="form-headline">Отправитель</h3>
 
-          <input
-            type="radio"
-            v-model="owner"
-            value="receiver1"
-            name="personal"
-            id="receiver1"
-          />
-          <label for="receiver1">Грузополучатель</label>
-        </div>
         <div class="form-sender__body">
           <div class="form-sender__body-email">
-            <input type="text" placeholder="Имя и фамилия * " />
+            <input
+              type="text"
+              v-model="sender.name"
+              placeholder="Имя и фамилия * "
+            />
           </div>
           <div class="form-sender__body-email">
-            <input type="text" placeholder="Электронная почта * " />
+            <input
+              v-model="sender.email"
+              type="text"
+              placeholder="Электронная почта * "
+            />
           </div>
         </div>
         <div class="form-sender__body-phone">
           <vue-phone-number-input
             v-model="senderPhoneNumber"
-            @input="results = $event"
+            @update="senderResults = $event"
             v-bind="props"
             color="#FFA300"
           ></vue-phone-number-input>
           <div class="form-sender__body-phone-index">
-            <input type="text" placeholder="Почтовый индекс * " />
+            <input
+              v-model="sender.index"
+              type="text"
+              placeholder="Почтовый индекс * "
+            />
           </div>
         </div>
         <div class="form-sender__body-country">
@@ -65,6 +79,7 @@
             class="form-select"
             v-model="sender.city"
             @change="getSenderRegionsList"
+            :disabled="!sender.cities.length"
           >
             <option disabled value="Выберите город">Выберите город *</option>
             <option
@@ -75,7 +90,11 @@
               {{ city.name }}
             </option>
           </select>
-          <select class="form-select" v-model="sender.region">
+          <select
+            class="form-select"
+            v-model="sender.region"
+            :disabled="!sender.regions.length"
+          >
             <option disabled value="Выберите регион">Выберите регион *</option>
             <option
               :value="region.id"
@@ -87,7 +106,11 @@
           </select>
         </div>
         <div class="form-sender__body-country">
-          <input type="text" placeholder="Название улицы, дома и т.д. * " />
+          <input
+            v-model="sender.address"
+            type="text"
+            placeholder="Название улицы, дома и т.д. * "
+          />
         </div>
         <div class="form-receiver__body-settings">
           <select class="form-select" v-model="sender.condition">
@@ -104,58 +127,36 @@
           </select>
         </div>
       </div>
-      <div
-        class="form-receiver"
-        :class="owner !== 'sender' ? 'active' : 'not-active'"
-      >
-        <div class="form-receiver__header">
-          <div class="mobile-input">
-            <input
-              type="radio"
-              v-model="owner"
-              checked
-              name="personal"
-              value="sender"
-              id="sender1"
-            />
-            <label for="sender1">Отправитель</label>
-
-            <input
-              type="radio"
-              v-model="owner"
-              value="receiver1"
-              name="personal"
-              id="receiver3"
-            />
-            <label for="receiver3">Грузополучатель</label>
-          </div>
-          <div class="desktop-input">
-            <input
-              type="radio"
-              v-model="owner"
-              value="receiver"
-              name="personal"
-              id="receiver2"
-            />
-            <label for="receiver2">Грузополучатель</label>
-          </div>
-        </div>
+      <div class="form-receiver">
+        <h3 class="form-headline">Грузополучатель</h3>
         <div class="form-receiver__body">
           <div class="form-receiver__body-country">
-            <input type="text" placeholder="Имя и фамилия * " />
+            <input
+              v-model="receiver.name"
+              type="text"
+              placeholder="Имя и фамилия * "
+            />
           </div>
           <div class="form-receiver__body-country">
-            <input type="text" placeholder="Электронная почта * " />
+            <input
+              v-model="receiver.email"
+              type="text"
+              placeholder="Электронная почта * "
+            />
           </div>
           <div class="form-receiver__body-phone">
             <vue-phone-number-input
               color="#FFA300"
               v-model="receiverPhoneNumber"
-              @update="results = $event"
+              @update="receiverResults = $event"
               v-bind="props"
             ></vue-phone-number-input>
             <div class="form-sender__body-phone-index">
-              <input type="text" placeholder="Почтовый индекс * " />
+              <input
+                v-model="receiver.index"
+                type="text"
+                placeholder="Почтовый индекс * "
+              />
             </div>
           </div>
           <div class="form-sender__body-country">
@@ -181,6 +182,7 @@
               class="form-select"
               v-model="receiver.city"
               @change="getReceiverRegionsList"
+              :disabled="!receiver.cities.length"
             >
               <option disabled value="Выберите город">Выберите город *</option>
               <option
@@ -191,7 +193,11 @@
                 {{ city.name }}
               </option>
             </select>
-            <select class="form-select" v-model="receiver.region">
+            <select
+              class="form-select"
+              v-model="receiver.region"
+              :disabled="!receiver.regions.length"
+            >
               <option disabled value="Выберите регион">
                 Выберите регион *
               </option>
@@ -205,7 +211,11 @@
             </select>
           </div>
           <div class="form-sender__body-country">
-            <input type="text" placeholder="Название улицы, дома и т.д. * " />
+            <input
+              v-model="receiver.address"
+              type="text"
+              placeholder="Название улицы, дома и т.д. * "
+            />
           </div>
           <div class="form-receiver__body-methods">
             <select class="form-select" v-model="receiver.method">
@@ -229,6 +239,11 @@
 
 <script>
 export default {
+  props: {
+    changed: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
       props: {
@@ -239,9 +254,14 @@ export default {
       },
       receiverPhoneNumber: null,
       senderPhoneNumber: null,
-      results: null,
+      senderResults: null,
+      receiverResults: null,
       owner: "sender",
       sender: {
+        name: "",
+        email: "",
+        index: "",
+        address: "",
         country: "Выберите страну",
         countries: [],
         city: "Выберите город",
@@ -251,6 +271,10 @@ export default {
         condition: "Условия поставки",
       },
       receiver: {
+        name: "",
+        email: "",
+        index: "",
+        address: "",
         country: "Выберите страну",
         countries: [],
         city: "Выберите город",
@@ -286,6 +310,9 @@ export default {
     methodList() {
       this.setMethodList();
     },
+    isChanged() {
+      this.sendData();
+    },
   },
   computed: {
     countryList() {
@@ -308,6 +335,9 @@ export default {
     },
     methodList() {
       return this.$store.getters["application/getMethodList"];
+    },
+    isChanged() {
+      return this.changed;
     },
   },
   methods: {
@@ -352,6 +382,16 @@ export default {
     },
     setMethodList() {
       this.methods = this.methodList.data;
+    },
+    sendData() {
+      this.$emit(
+        "sender",
+        this.sender,
+        this.receiver,
+        this.owner,
+        this.senderResults.formattedNumber,
+        this.receiverResults.formattedNumber
+      );
     },
   },
 

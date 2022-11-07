@@ -25,7 +25,7 @@
 
     <!-- <NewsView></NewsView> -->
 
-    <PartnersView :partners="partners"></PartnersView>
+    <PartnersView :partners="partners" v-if="partners.length"></PartnersView>
 
     <FAQView :faq="data.faqs"></FAQView>
 
@@ -72,7 +72,7 @@ export default {
         name_en: "",
         image: "",
       },
-      partners: []
+      partners: [],
     };
   },
 
@@ -85,13 +85,28 @@ export default {
   methods: {
     getData() {
       this.data = this.indexPageData.data;
-      this.partners = this.data.partners
       this.bannerData = this.data.banner;
+
+      setTimeout(() => {
+        let partnersData = [];
+
+        this.data.partners.forEach((elem) => {
+          let link = elem.link;
+          let image = process.env.baseUrl + elem.image;
+          let a = {
+            link,
+            image,
+          };
+          partnersData.push(a);
+        });
+        this.partners = partnersData;
+      }, 500);
     },
   },
 
   mounted() {
     this.$store.dispatch("indexPage/getIndexPageData");
+    this.$store.dispatch("application/getColliList");
   },
 };
 </script>
