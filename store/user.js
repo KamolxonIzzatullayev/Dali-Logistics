@@ -8,48 +8,48 @@ export const state = () => ({
                     id: 0,
                     title: 'Home',
                     path: '',
+                    icon: 'admin-account',
                     status: true
                 },
                 {
                     id: 1,
                     title: 'My applications',
                     path: 'applications',
+                    icon: 'admin-application',
                     status: false,
                 },
                 {
                     id: 2,
                     title: 'My addresses',
                     path: 'addresses',
+                    icon: 'admin-brokers',
                     status: false,
                 },
                 {
                     id: 3,
                     title: 'Directory',
                     path: 'directory',
+                    icon: 'admin-content-manager',
                     status: false,
                 },
                 {
                     id: 4,
-                    title: 'My addresses',
-                    path: 'addresses',
-                    status: false,
-                },
-                {
-                    id: 5,
                     title: 'Chat with an operator',
                     path: 'chat-operator',
+                    icon: "admin-online-chat",
                     status: false,
                 },
                 {
                     id: 5,
                     title: 'Settings',
                     path: 'settings',
+                    icon: 'admin-content-manager',
                     status: false,
                 },
             ]
         },
         {
-            id: 0,
+            id: 1,
             name: 'logist',
             menu: [
                 {
@@ -85,7 +85,7 @@ export const state = () => ({
             ]
         },
         {
-            id: 0,
+            id: 2,
             name: 'operator',
             menu: [
                 {

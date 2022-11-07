@@ -60,7 +60,7 @@
             <div class="modal-body__header">
               <div class="modal-body__header-title">Welcome to</div>
               <div class="modal-body__header-logo">
-                <img src="../../../../assets/icons/auth-logo.svg" alt="" />
+                <img src="@/assets/icons/auth-logo.svg" alt="" />
               </div>
               <div class="modal-body__header-text">
                 <p>
@@ -69,7 +69,7 @@
                 </p>
               </div>
             </div>
-            <div class="modal-body__body">
+            <div v-if="authType == 0 || authType == 1" class="modal-body__body">
               <div class="input-group mt-3" v-if="authType == 1">
                 <input
                   type="text"
@@ -106,7 +106,7 @@
                 />
                 <span class="input-group-text" id="basic-addon2">
                   <img
-                    src="../../../../assets/icons/auth-email.svg"
+                    src="@/assets/icons/auth-email.svg"
                     alt="email"
                   />
                 </span>
@@ -127,7 +127,7 @@
                 />
                 <span class="input-group-text" id="basic-addon2">
                   <img
-                    src="../../../../assets/icons/contact-phone.svg"
+                    src="@/assets/icons/contact-phone.svg"
                     alt="email"
                   />
                 </span>
@@ -151,7 +151,7 @@
                 />
                 <span class="input-group-text" id="basic-addon3">
                   <img
-                    src="../../../../assets/icons/auth-show-password.svg"
+                    src="@/assets/icons/auth-show-password.svg"
                     alt=""
                   />
                 </span>
@@ -172,7 +172,7 @@
                 />
                 <span class="input-group-text" id="basic-addon4">
                   <img
-                    src="../../../../assets/icons/auth-show-password.svg"
+                    src="@/assets/icons/auth-show-password.svg"
                     alt=""
                   />
                 </span>
@@ -187,13 +187,21 @@
 
               <input
                 class="mt-3"
-                v-if="authType == 0"
+                v-if="authType == 1"
                 type="checkbox"
                 id="terms"
               />
-              <label class="mt-3" v-if="authType == 0" for="terms"
+              <label class="mt-3" v-if="authType == 1" for="terms"
                 >I agree to the terms of service</label
               >
+
+              <div class="modal-body__body-forget mt-3" v-else @click="authType = 2">
+                Forgot password ?
+              </div>
+            </div>
+
+            <div v-else class="modal-body__forget">
+              AXAD dabba
             </div>
           </div>
 
