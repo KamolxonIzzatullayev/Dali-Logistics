@@ -55,6 +55,9 @@ export default {
     ...mapGetters({
       menuList: "getAdminMenu",
     }),
+    thisPageUrl() {
+      return this.$route.path;
+    },
   },
 
   methods: {

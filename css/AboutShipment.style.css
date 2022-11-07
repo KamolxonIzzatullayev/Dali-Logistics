@@ -1,0 +1,205 @@
+.c-cu-shipment .shipment-headline {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+}
+.c-cu-shipment .shipment-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .c-cu-shipment .shipment-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .c-cu-shipment .shipment-head input[type=radio]:checked,
+.c-cu-shipment .shipment-head input[type=radio]:checked + label {
+    display: none;
+  }
+}
+.c-cu-shipment .shipment-head__add, .c-cu-shipment .shipment-head__send {
+  flex: 1;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
+  .c-cu-shipment .shipment-head__add, .c-cu-shipment .shipment-head__send {
+    flex: none;
+  }
+}
+.c-cu-shipment .shipment-body {
+  overflow-x: auto;
+}
+.c-cu-shipment .shipment-body__header {
+  min-width: 1200px;
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.c-cu-shipment .shipment-body__header-item {
+  flex: 3;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 150%;
+}
+.c-cu-shipment .shipment-body__header-action {
+  flex: 1;
+}
+.c-cu-shipment .shipment-body__body {
+  min-width: 1200px;
+}
+.c-cu-shipment .shipment-body__body-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.c-cu-shipment .shipment-body__body-item-input {
+  flex: 3;
+}
+.c-cu-shipment .shipment-body__body-item-input input {
+  background: #f6f7fb;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+  padding: 0.5rem 0.4rem;
+}
+.c-cu-shipment .shipment-body__body-item-input input:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-shipment .shipment-body__body-item-action {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.c-cu-shipment .shipment-body__body-item-action.disabled button {
+  pointer-events: none;
+}
+.c-cu-shipment .shipment-body__body-item-action button {
+  width: 3.2rem;
+  background: #ffc258;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  line-height: 1rem;
+  padding: 1rem 1.2rem;
+}
+.c-cu-shipment .shipment-body__footer {
+  min-width: 1200px;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+.c-cu-shipment .shipment-body__footer-item {
+  flex: 3;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
+.c-cu-shipment .shipment-body__footer-item input {
+  background: #f6f7fb;
+  border: none;
+  width: 100%;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+  padding: 0.5rem 0.4rem;
+}
+.c-cu-shipment .shipment-body__footer-item input:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-shipment .shipment-body__footer-action {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.c-cu-shipment .shipment-body__footer-action button {
+  width: 3.2rem;
+  background: #1e4382;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  line-height: 1rem;
+  padding: 1rem;
+}
+.c-cu-shipment .shipment .sending input {
+  display: none;
+}
+.c-cu-shipment .shipment .sending button {
+  padding: 100px 0;
+  background: #f6f7fb;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.c-cu-shipment .shipment .sending.active button {
+  border: 2px dashed #faba3f;
+}
+.c-cu-shipment .shipment-footer__comment {
+  margin: 3rem 0;
+}
+.c-cu-shipment .shipment-footer__comment textarea {
+  width: 100%;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  resize: none;
+  background: #f6f7fb;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+}
+.c-cu-shipment .shipment-footer__comment textarea:focus {
+  outline: 1px solid #faba3f;
+}
+.c-cu-shipment .shipment-footer__submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 1.25rem;
+}
+.c-cu-shipment .shipment-footer__submit .form-check-input {
+  border-radius: none !important;
+}
+@media (max-width: 768px) {
+  .c-cu-shipment .shipment-footer__submit {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .c-cu-shipment .shipment-footer__submit label,
+.c-cu-shipment .shipment-footer__submit input {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .c-cu-shipment .shipment-footer__submit-done {
+    width: 100%;
+    margin-left: -1.25rem;
+  }
+  .c-cu-shipment .shipment-footer__submit button {
+    width: 100%;
+  }
+}
+.c-cu-shipment .shipment-footer__submit input:checked {
+  background-color: #ec9b00;
+}
+.c-cu-shipment .shipment-footer__submit input:focus {
+  box-shadow: none;
+}
+.c-cu-shipment .shipment-footer__submit button {
+  border: none;
+  background: #ffc258;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 1rem 2rem;
+}/*# sourceMappingURL=AboutShipment.style.css.map */

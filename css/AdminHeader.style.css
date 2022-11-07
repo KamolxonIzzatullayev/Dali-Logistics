@@ -1,0 +1,100 @@
+.dashboard-header {
+  padding: 25px 36px;
+  background: #f8f8f8;
+  align-items: center;
+}
+.dashboard-header__search {
+  margin: 0 !important;
+  background: #fefefe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  padding: 6px;
+}
+.dashboard-header__search input {
+  padding: 1rem 25px;
+  border-radius: 10px 0 0 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  border: none;
+}
+.dashboard-header__search input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.dashboard-header__search input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.dashboard-header__search input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.dashboard-header__search input:focus {
+  box-shadow: none;
+  border: none;
+}
+.dashboard-header__search span {
+  border-radius: 0 10px 10px 0;
+  background: #fefefe;
+  border: none;
+  padding: 0;
+  margin-left: 0.4rem;
+}
+.dashboard-header__search span img {
+  padding: 12px;
+  background: #1e4382;
+  border-radius: 10px;
+}
+.dashboard-header__notification button, .dashboard-header__chat button, .dashboard-header__profile button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-header__notification button .profile, .dashboard-header__chat button .profile, .dashboard-header__profile button .profile {
+  margin-left: 4px;
+  padding-right: 2rem;
+}
+.dashboard-header__notification button .profile p, .dashboard-header__chat button .profile p, .dashboard-header__profile button .profile p {
+  margin: 0;
+  text-align: left;
+}
+.dashboard-header__notification button .profile-name, .dashboard-header__chat button .profile-name, .dashboard-header__profile button .profile-name {
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+.dashboard-header__notification button .profile-role, .dashboard-header__chat button .profile-role, .dashboard-header__profile button .profile-role {
+  font-weight: 500;
+  font-size: 14.2857px;
+  line-height: 150%;
+  color: #a3a3a3;
+}
+.dashboard-header__notification button:focus, .dashboard-header__chat button:focus, .dashboard-header__profile button:focus {
+  background-color: transparent;
+  box-shadow: none;
+}
+.dashboard-header__notification button:focus-visible, .dashboard-header__chat button:focus-visible, .dashboard-header__profile button:focus-visible {
+  box-shadow: none;
+}
+.dashboard-header__notification button:active, .dashboard-header__chat button:active, .dashboard-header__profile button:active {
+  background-color: transparent;
+}
+.dashboard-header__notification:hover .dropdown-menu, .dashboard-header__chat:hover .dropdown-menu, .dashboard-header__profile:hover .dropdown-menu {
+  display: block;
+}
+.dashboard-header__notification .dropdown-toggle::after, .dashboard-header__chat .dropdown-toggle::after, .dashboard-header__profile .dropdown-toggle::after {
+  display: none;
+}/*# sourceMappingURL=AdminHeader.style.css.map */

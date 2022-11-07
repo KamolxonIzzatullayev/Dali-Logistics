@@ -103,5 +103,72 @@
     .dropdown-toggle::after {
       display: none;
     }
+
+    .dropdown-menu {
+      width: 350px;
+
+      &-end {
+        span {
+          cursor: pointer;
+        }
+      }
+
+      .show-all {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        h3 {
+          font-weight: 600;
+          font-size: 21.7834px;
+          line-height: 150%;
+          color: #000000;
+        }
+
+        a {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 150%;
+          text-decoration-line: underline;
+          color: #fbc159;
+        }
+      }
+
+      .dropdown-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        &__info {
+          h3,
+          p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            color: rgba(0, 0, 0, 0.4);
+          }
+
+          p {
+            margin-top: -10px !important;
+          }
+
+          h3 {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+
+        &__date {
+          .circle {
+            width: 8px;
+            height: 8px;
+            background: red;
+            border-radius: 50%;
+          }
+          p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 150%;
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
   }
 }

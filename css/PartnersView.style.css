@@ -1,0 +1,29 @@
+.c-l-partners {
+  z-index: 2;
+  position: relative;
+}
+.c-l-partners h1 {
+  margin: 4rem 0;
+}
+.c-l-partners .container-xxl {
+  overflow-x: auto;
+}
+.c-l-partners .partners {
+  display: flex;
+  min-width: 1200px;
+}
+.c-l-partners .partners-item {
+  flex: 1;
+  margin: 2rem;
+  display: flex;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  flex-direction: column;
+}
+.c-l-partners .partners-item img {
+  background: transparent;
+}/*# sourceMappingURL=PartnersView.style.css.map */

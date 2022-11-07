@@ -1,0 +1,138 @@
+.sidebar,
+.smallbar {
+  width: 22%;
+  background: #0d4b93;
+  border-radius: 0px 20px 0px 0px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+.sidebar::-webkit-scrollbar,
+.smallbar::-webkit-scrollbar {
+  position: relative;
+  width: 7px;
+  margin-top: 1rem;
+  z-index: 1;
+}
+.sidebar::-webkit-scrollbar-track,
+.smallbar::-webkit-scrollbar-track {
+  background: rgba(254, 254, 254, 0.2);
+  overflow: hidden;
+  margin-top: 15px;
+  z-index: 1;
+}
+.sidebar::-webkit-scrollbar-thumb,
+.smallbar::-webkit-scrollbar-thumb {
+  background: #faba3f;
+  border-radius: 10px;
+  z-index: 1;
+}
+.sidebar-header,
+.smallbar-header {
+  padding: 2rem 3rem 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-header__logo img,
+.smallbar-header__logo img {
+  width: 100%;
+}
+.sidebar-header__back,
+.smallbar-header__back {
+  cursor: pointer;
+}
+.sidebar-body,
+.smallbar-body {
+  color: white;
+}
+.sidebar-body__list,
+.smallbar-body__list {
+  padding: 2rem 0 0 4rem;
+  list-style: none;
+}
+.sidebar-body__list-item,
+.smallbar-body__list-item {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.sidebar-body__list-item a,
+.smallbar-body__list-item a {
+  padding: 1.5rem 0;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+.sidebar-body__list-item img,
+.smallbar-body__list-item img {
+  margin-right: 25px;
+}
+.sidebar-body__list-item span,
+.smallbar-body__list-item span {
+  display: inline-block;
+}
+.sidebar-body__list-item .backgraund,
+.smallbar-body__list-item .backgraund {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 26.41%, rgba(68, 180, 255, 0) 91.5%);
+  width: 0%;
+  transition: all 0.4s ease-out;
+}
+.sidebar-body__list-item:hover .backgraund,
+.smallbar-body__list-item:hover .backgraund {
+  width: 100%;
+}
+.sidebar-body__list-item.active .backgraund,
+.smallbar-body__list-item.active .backgraund {
+  width: 100%;
+}
+
+.smallbar {
+  width: 5%;
+  position: relative;
+}
+.smallbar .sidebar-header {
+  padding: 2rem 0 0 0;
+  position: relative;
+}
+.smallbar .sidebar-header__logo {
+  width: 100%;
+}
+.smallbar .sidebar-header__logo img {
+  width: 100%;
+  padding: 0 1rem;
+}
+.smallbar .sidebar-header__back {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  padding: 0.4rem;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 453;
+}
+.smallbar .sidebar-header__back:hover {
+  background-color: rgb(243, 243, 243);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+.smallbar .sidebar-body__list {
+  padding: 2rem 0 0 0;
+}
+.smallbar .sidebar-body__list-item a {
+  display: flex;
+  justify-content: center;
+}
+.smallbar .sidebar-body__list-item img {
+  margin-right: 0;
+}
+.smallbar .sidebar-body__list-item span {
+  display: none;
+}/*# sourceMappingURL=AdminSidebar.style.css.map */

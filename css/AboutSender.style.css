@@ -1,0 +1,208 @@
+.c-cu-sender .form-sender {
+  flex: 1;
+  padding-right: 1rem;
+}
+.c-cu-sender .form-sender__header label:first-of-type {
+  margin-right: 1rem;
+}
+.c-cu-sender .form-sender__header input:last-of-type,
+.c-cu-sender .form-sender__header label:last-of-type {
+  display: none;
+}
+.c-cu-sender .form-sender__body-email input {
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+  border: none;
+  margin: 1rem 1rem 1rem 0;
+  background-color: #f5f5f5;
+}
+.c-cu-sender .form-sender__body-email input:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-sender .form-sender__body-country {
+  display: flex;
+}
+.c-cu-sender .form-sender__body-country select,
+.c-cu-sender .form-sender__body-country input {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  margin: 1rem 1rem 1rem 0;
+  background-color: #f5f5f5;
+}
+.c-cu-sender .form-sender__body-country select:focus,
+.c-cu-sender .form-sender__body-country input:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-sender .form-sender__body-country select:last-child,
+.c-cu-sender .form-sender__body-country input:last-child {
+  margin-right: 0;
+}
+.c-cu-sender .form-sender__body-phone {
+  display: flex;
+}
+.c-cu-sender .form-sender__body-phone-index {
+  flex: 1;
+}
+.c-cu-sender .form-sender__body-phone-index input {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  margin: 1rem 1rem 1rem 0;
+  background-color: #f5f5f5;
+}
+.c-cu-sender .form-sender__body-phone-index input:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-sender .form-sender__body-phone-index input:last-child {
+  margin-right: 0;
+}
+.c-cu-sender .form-sender__body-phone .vue-phone-number-input {
+  flex: 1;
+  display: flex;
+  margin: 1rem 1rem 1rem 0;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+}
+.c-cu-sender .form-sender__body-phone .country-selector {
+  height: 100%;
+}
+.c-cu-sender .form-sender__body-phone .country-selector__country-flag {
+  transform: translate(0, 70%);
+}
+.c-cu-sender .form-sender__body-phone .input-tel {
+  height: 100%;
+}
+.c-cu-sender .form-sender__body-phone .input-tel__label, .c-cu-sender .form-sender__body-phone .country-selector__label {
+  display: none;
+}
+.c-cu-sender .form-sender__body-phone .country-selector__input,
+.c-cu-sender .form-sender__body-phone .input-tel__input {
+  background: transparent;
+  border: none;
+  height: 100%;
+  padding-top: 0 !important;
+}
+.c-cu-sender .form-sender__body-phone .country-selector__input:focus,
+.c-cu-sender .form-sender__body-phone .input-tel__input:focus {
+  border: none !important;
+}
+.c-cu-sender .form-receiver {
+  flex: 1;
+  padding-right: 1rem;
+}
+.c-cu-sender .form-receiver__header .mobile-input {
+  display: none;
+}
+.c-cu-sender .form-receiver__body-phone {
+  display: flex;
+}
+.c-cu-sender .form-receiver__body-phone-index {
+  flex: 1;
+}
+.c-cu-sender .form-receiver__body-phone-index input {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  margin: 1rem 1rem 1rem 0;
+  background-color: #f5f5f5;
+}
+.c-cu-sender .form-receiver__body-phone-index input:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-sender .form-receiver__body-phone-index input:last-child {
+  margin-right: 0;
+}
+.c-cu-sender .form-receiver__body-phone .vue-phone-number-input {
+  flex: 1;
+  display: flex;
+  margin: 1rem 1rem 1rem 0;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+}
+.c-cu-sender .form-receiver__body-phone .country-selector {
+  height: 100%;
+}
+.c-cu-sender .form-receiver__body-phone .country-selector__country-flag {
+  transform: translate(0, 70%);
+}
+.c-cu-sender .form-receiver__body-phone .input-tel {
+  height: 100%;
+}
+.c-cu-sender .form-receiver__body-phone .input-tel__label, .c-cu-sender .form-receiver__body-phone .country-selector__label {
+  display: none;
+}
+.c-cu-sender .form-receiver__body-phone .country-selector__input,
+.c-cu-sender .form-receiver__body-phone .input-tel__input {
+  background: transparent;
+  border: none;
+  height: 100%;
+  padding-top: 0 !important;
+}
+.c-cu-sender .form-receiver__body-phone .country-selector__input:focus,
+.c-cu-sender .form-receiver__body-phone .input-tel__input:focus {
+  border: none !important;
+}
+.c-cu-sender .form-receiver__body-country input, .c-cu-sender .form-receiver__body-settings select, .c-cu-sender .form-receiver__body-methods select {
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+  margin: 1rem 1rem 1rem 0;
+  border: none;
+  background-color: #f5f5f5;
+}
+.c-cu-sender .form-receiver__body-country input:focus, .c-cu-sender .form-receiver__body-settings select:focus, .c-cu-sender .form-receiver__body-methods select:focus {
+  outline: 1px solid rgba(236, 155, 0, 0.5);
+}
+.c-cu-sender .form-receiver__body-methods {
+  padding-top: 1rem;
+}
+.c-cu-sender .form-receiver__body-methods select {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .c-cu-sender .form-sender.active {
+    display: block;
+  }
+  .c-cu-sender .form-sender.not-active {
+    display: none;
+  }
+  .c-cu-sender .form-sender__header input:last-of-type,
+.c-cu-sender .form-sender__header label:last-of-type {
+    display: inline;
+  }
+  .c-cu-sender .form-sender__body-country:last-child {
+    display: block;
+  }
+  .c-cu-sender .form-sender input:last-child,
+.c-cu-sender .form-sender select:last-of-type {
+    width: 100%;
+  }
+  .c-cu-sender .form-receiver {
+    display: none;
+  }
+  .c-cu-sender .form-receiver__header .mobile-input {
+    display: block;
+  }
+  .c-cu-sender .form-receiver__header .desktop-input {
+    display: none;
+  }
+  .c-cu-sender .form-receiver.active {
+    display: block;
+  }
+  .c-cu-sender .form-receiver.not-active {
+    display: none;
+  }
+}/*# sourceMappingURL=AboutSender.style.css.map */
