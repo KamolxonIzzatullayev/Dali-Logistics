@@ -1,5 +1,5 @@
 <template>
-  <div class="l-error">
+  <div class="l-error" v-if="error.statusCode == '404'">
     <div class="error-page">
       <img
         class="error-page__img"
@@ -21,6 +21,12 @@
 <script>
 export default {
   layout: "error-layout",
+  props: {
+    error: {
+      type: Object,
+      default: null,
+    },
+  },
 };
 </script>
 

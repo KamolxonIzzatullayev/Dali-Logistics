@@ -40,6 +40,7 @@
 
       .offcanvas {
         background: #1e4382;
+        z-index: 99999;
 
         &-header {
           padding: 32px 16px;

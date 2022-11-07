@@ -20,6 +20,7 @@ export default {
       changed: true,
       applicationSenderForm: {},
       applicationShipmentForm: {},
+      error: false,
     };
   },
 
@@ -32,7 +33,6 @@ export default {
       console.log(comment);
     },
     sender(sender, receiver, owner, senderPhone, receiverPhone) {
-
       if (
         sender.name == "" ||
         sender.address == "" ||
@@ -78,7 +78,6 @@ export default {
 
         console.log(a);
       } else {
-        
       }
     },
   },
