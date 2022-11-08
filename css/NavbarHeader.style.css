@@ -82,6 +82,39 @@
 .c-cu-navbar .modal-body__body label {
   color: rgba(0, 0, 0, 0.2);
 }
+.c-cu-navbar .modal-body__body-forget {
+  color: #ffc258;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  cursor: pointer;
+}
+.c-cu-navbar .modal-body__forget .input-group {
+  box-shadow: -4px 4px 8px rgba(221, 222, 226, 0.2), 4px -4px 8px rgba(221, 222, 226, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(221, 222, 226, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 222, 226, 0.5);
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 0;
+}
+.c-cu-navbar .modal-body__forget .input-group input {
+  border: none;
+  height: 100%;
+}
+.c-cu-navbar .modal-body__forget .input-group input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.c-cu-navbar .modal-body__forget .input-group input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.c-cu-navbar .modal-body__forget .input-group input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.c-cu-navbar .modal-body__forget .input-group input:focus {
+  box-shadow: none;
+}
+.c-cu-navbar .modal-body__forget .input-group span {
+  background-color: transparent;
+  border: none;
+}
 .c-cu-navbar .modal-footer {
   margin: 0 2rem 2rem 2rem;
   display: flex;

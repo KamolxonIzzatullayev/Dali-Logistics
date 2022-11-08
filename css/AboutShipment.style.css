@@ -61,14 +61,17 @@
 .c-cu-shipment .shipment-body__body-item-input {
   flex: 3;
 }
-.c-cu-shipment .shipment-body__body-item-input input {
-  background: #f6f7fb;
+.c-cu-shipment .shipment-body__body-item-input input,
+.c-cu-shipment .shipment-body__body-item-input select {
+  width: 80%;
+  background: #f5f5f5;
   border: none;
   box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
   border-radius: 10px;
   padding: 0.5rem 0.4rem;
 }
-.c-cu-shipment .shipment-body__body-item-input input:focus {
+.c-cu-shipment .shipment-body__body-item-input input:focus,
+.c-cu-shipment .shipment-body__body-item-input select:focus {
   outline: 1px solid rgba(236, 155, 0, 0.5);
 }
 .c-cu-shipment .shipment-body__body-item-action {
@@ -105,9 +108,9 @@
   padding-right: 2rem;
 }
 .c-cu-shipment .shipment-body__footer-item input {
-  background: #f6f7fb;
+  width: 90%;
+  background: #f5f5f5;
   border: none;
-  width: 100%;
   box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
   border-radius: 10px;
   padding: 0.5rem 0.4rem;
@@ -154,12 +157,15 @@
   padding: 0.6rem 1.25rem;
   border: none;
   resize: none;
-  background: #f6f7fb;
+  background: #f5f5f5;
   box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
   border-radius: 10px;
 }
 .c-cu-shipment .shipment-footer__comment textarea:focus {
   outline: 1px solid #faba3f;
+}
+.c-cu-shipment .shipment-footer__warning-text {
+  color: red;
 }
 .c-cu-shipment .shipment-footer__submit {
   display: flex;
@@ -196,10 +202,16 @@
 }
 .c-cu-shipment .shipment-footer__submit button {
   border: none;
-  background: #ffc258;
   border-radius: 8px;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   padding: 1rem 2rem;
+}
+.c-cu-shipment .shipment-footer__submit button.notDone {
+  background-color: #faebd0;
+  pointer-events: none;
+}
+.c-cu-shipment .shipment-footer__submit button.done {
+  background: #ffc258;
 }/*# sourceMappingURL=AboutShipment.style.css.map */

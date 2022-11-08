@@ -105,10 +105,7 @@
                   aria-describedby="basic-addon2"
                 />
                 <span class="input-group-text" id="basic-addon2">
-                  <img
-                    src="@/assets/icons/auth-email.svg"
-                    alt="email"
-                  />
+                  <img src="@/assets/icons/auth-email.svg" alt="email" />
                 </span>
               </div>
 
@@ -126,10 +123,7 @@
                   aria-describedby="basic-addon2"
                 />
                 <span class="input-group-text" id="basic-addon2">
-                  <img
-                    src="@/assets/icons/contact-phone.svg"
-                    alt="email"
-                  />
+                  <img src="@/assets/icons/contact-phone.svg" alt="email" />
                 </span>
               </div>
 
@@ -150,10 +144,7 @@
                   aria-describedby="basic-addon3"
                 />
                 <span class="input-group-text" id="basic-addon3">
-                  <img
-                    src="@/assets/icons/auth-show-password.svg"
-                    alt=""
-                  />
+                  <img src="@/assets/icons/auth-show-password.svg" alt="" />
                 </span>
               </div>
 
@@ -171,10 +162,7 @@
                   aria-describedby="basic-addon4"
                 />
                 <span class="input-group-text" id="basic-addon4">
-                  <img
-                    src="@/assets/icons/auth-show-password.svg"
-                    alt=""
-                  />
+                  <img src="@/assets/icons/auth-show-password.svg" alt="" />
                 </span>
               </div>
 
@@ -195,13 +183,33 @@
                 >I agree to the terms of service</label
               >
 
-              <div class="modal-body__body-forget mt-3" v-else @click="authType = 2">
+              <div
+                class="modal-body__body-forget mt-3"
+                v-else
+                @click="authType = 2"
+              >
                 Forgot password ?
               </div>
             </div>
 
             <div v-else class="modal-body__forget">
-              AXAD dabba
+              <div class="input-group mt-3">
+                <input
+                  type="email"
+                  v-model="user.email"
+                  class="form-control"
+                  placeholder="E-mail"
+                  aria-label="E-mail"
+                  aria-describedby="basic-addon2"
+                />
+                <span class="input-group-text" id="basic-addon2">
+                  <img src="@/assets/icons/auth-email.svg" alt="email" />
+                </span>
+              </div>
+
+              <p class="modal-body__body-warning" v-if="warning.emailStatus">
+                {{ warning.email }}
+              </p>
             </div>
           </div>
 

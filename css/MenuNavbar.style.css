@@ -29,6 +29,32 @@
   border: none;
   background: transparent;
 }
+.c-cu-menu .menu nav .offcanvas {
+  background: #1e4382;
+  z-index: 99999;
+}
+.c-cu-menu .menu nav .offcanvas-header {
+  padding: 32px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.c-cu-menu .menu nav .offcanvas-header button {
+  color: white !important;
+}
+.c-cu-menu .menu nav .offcanvas .nav-item {
+  margin-top: 32px;
+}
+.c-cu-menu .menu nav .offcanvas .nav-item a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+}
+.c-cu-menu .menu nav .offcanvas .nav-item a span {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
 .c-cu-menu .modal-content {
   border-radius: 10px;
 }
@@ -116,9 +142,6 @@
 }
 
 @media (min-width: 768px) {
-  .c-cu-menu .menu-navbar {
-    background: #1e4382;
-  }
   .c-cu-menu .menu nav {
     display: none;
   }
