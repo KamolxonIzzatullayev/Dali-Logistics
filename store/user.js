@@ -46,6 +46,16 @@ export const state = () => ({
                     icon: 'admin-content-manager',
                     status: false,
                 },
+            ],
+            adresses: [
+                {
+                    id: 0,
+                    country: 'Uzbekistan',
+                    region: 'Namangan',
+                    city: 'Chortoq',
+                    street: 'kokcha, 84',
+                    postcode: '161100',
+                }
             ]
         },
         {
@@ -114,7 +124,8 @@ export const state = () => ({
                 },
             ]
         }
-    ]
+    ],
+
 })
 export const getters = {
     getProfile(state) { return state.profile },

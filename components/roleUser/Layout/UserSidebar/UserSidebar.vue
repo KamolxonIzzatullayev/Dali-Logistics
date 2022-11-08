@@ -33,7 +33,7 @@
           v-for="item in thisRole.menu"
           :key="item.id"
           class="sidebar-body__list-item"
-          :class="$route.path.slice(5) == item.path ? 'active' : ''"
+          :class="$route.path.slice(6) == item.path ? 'active' : ''"
         >
           <nuxt-link :to="`/user/${item.path}`">
             <img

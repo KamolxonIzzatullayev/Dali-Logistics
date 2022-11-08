@@ -25,6 +25,14 @@
           line-height: 55px;
         }
 
+        h2 {
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 30px;
+          margin-bottom: 1rem;
+          margin-left: 1rem;
+        }
+
         &-icon {
           background: rgba(36, 136, 247, 0.2);
           border-radius: 50%;
@@ -41,6 +49,30 @@
         font-size: 21px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.5);
+      }
+
+      &-body {
+        display: flex;
+        align-items: center;
+
+        &-icon {
+          margin-right: 2rem;
+        }
+
+        &-text {
+          h1 {
+            font-weight: 600;
+            font-size: 45px;
+            line-height: 55px;
+            color: #1e4382;
+          }
+          p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
       }
     }
   }
@@ -103,6 +135,13 @@
           }
         }
       }
+    }
+  }
+
+  .banner {
+    margin: 4rem 0 0 0;
+    img {
+      width: 100%;
     }
   }
 }
