@@ -1,6 +1,6 @@
 .c-l-cards {
   padding: 4rem 0;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 .c-l-cards .card-wrapper {
