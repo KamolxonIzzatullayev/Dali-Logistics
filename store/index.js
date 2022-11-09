@@ -185,12 +185,14 @@ export const state = () => ({
             path: "support-manager",
             icon: "admin-support-manager"
         },
-    ]
+    ],
+    offers: [],
 })
 export const getters = {
     getSelectedTabId(state) { return state.selectedTabId },
     getTabHeaders(state) { return state.tabHeaders },
     getAdminMenu(state) { return state.adminMenu },
+    getOffersCard(state) { return state.offers },
 }
 export const mutations = {
     SET_SELECTED_TAB_ID(state, payload) {
@@ -203,8 +205,24 @@ export const mutations = {
             }
         });
         state.selectedTabId = payload;
+    },
+    SET_OFFERS(state, payload) {
+        state.offers = payload;
     }
 }
 export const actions = {
+    async getIndexPageData({ commit }, payload) {
+        try {
+            this.$axios.get(`/services?page=${payload}`)
+                .then((result) => {
+                    commit('SET_OFFERS', result.data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
 
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }

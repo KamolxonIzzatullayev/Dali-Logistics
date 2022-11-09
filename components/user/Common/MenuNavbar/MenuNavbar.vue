@@ -146,7 +146,7 @@
               </nuxt-link>
             </li>
             <li class="menu-navbar__list-item">
-              <nuxt-link class="menu-navbar__list-item" to="/offers">
+              <nuxt-link class="menu-navbar__list-item-link" to="/offers">
                 Услуги
               </nuxt-link>
             </li>

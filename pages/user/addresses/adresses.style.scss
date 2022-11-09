@@ -1,0 +1,30 @@
+.p-u-adresses {
+  padding: 4rem 36px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    &-action {
+      button {
+        background: #ffc258;
+        border-radius: 5px;
+        padding: 1rem 3rem;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        border: none;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: #ffa200;
+        }
+      }
+    }
+  }
+}
