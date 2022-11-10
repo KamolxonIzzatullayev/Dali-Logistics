@@ -266,7 +266,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({ userInfo: "auth/getUser" }),
+    ...mapGetters({ userInfo: "auth/getUser", userRole: "auth/getRole" }),
   },
 
   methods: {
@@ -277,12 +277,21 @@ export default {
     check() {
       if (this.authType == 0) {
         if (this.user.email.trim() !== "" && this.user.password.trim() !== "") {
-          this.$store.dispatch("auth/login", {
-            username: this.email,
-            password: this.password,
-          });
-          document.getElementById("auth-button").click();
-          this.$router.push("/admin");
+          if (this.user.password.trim().length > 5) {
+            this.$store.dispatch("auth/login", {
+              username: this.user.email,
+              password: this.user.password,
+            });
+            document.getElementById("auth-button").click();
+            setTimeout(() => {
+              this.$router.push(`/${this.userRole}`);
+            }, 1000);
+          } else {
+            this.warning.password =
+              "The password must be at least 6 characters.";
+            this.checkWarning();
+            this.warning.passwordStatus = true;
+          }
         } else {
           this.checkWarning();
         }

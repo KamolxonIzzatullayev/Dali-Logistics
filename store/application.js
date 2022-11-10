@@ -1,3 +1,4 @@
+import Cookie from 'js-cookie'
 export const state = () => ({
     countryList: {},
     senderCitiesList: {},
@@ -159,5 +160,35 @@ export const actions = {
             console.log(error);
         }
     },
+
+    async sendApplication(payload) {
+        try {
+            const token = Cookie.get('token')
+            const headers = {
+                "Authorization": `Bearer ${token}`,
+            }
+            if (token) {
+                this.$axios.post(`/application`, payload, { headers })
+                    .then((result) => {
+                        console.log(result);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+
+            } else {
+                this.$axios.post(`/application`, payload)
+                .then((result) => {
+                    console.log(result);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
 }
