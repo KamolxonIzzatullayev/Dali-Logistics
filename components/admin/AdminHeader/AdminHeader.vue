@@ -30,11 +30,7 @@
           <a class="" href="#"> Mark as all read </a>
         </li>
         <li>
-          <div
-            v-for="notification in notifications"
-            :key="notification.id"
-            :class="not - active"
-          >
+          <div v-for="notification in notifications" :key="notification.id">
             <a
               class="dropdown-item px-3 pt-3 justify-content-between d-flex"
               href="#"
@@ -70,11 +66,7 @@
           <h3>Messages</h3>
         </li>
         <li>
-          <div
-            v-for="message in messages"
-            :key="message.id"
-            :class="not - active"
-          >
+          <div v-for="message in messages" :key="message.id">
             <a
               class="dropdown-item px-3 py-3 justify-content-between d-flex"
               href="#"
@@ -124,11 +116,7 @@
       </button>
       <ul class="dropdown-menu w-100 p-0 dropdown-menu-end">
         <li>
-          <div
-            v-for="adminstrator in adminstrations"
-            :key="adminstrator.id"
-            :class="not - active"
-          >
+          <div v-for="adminstrator in adminstrations" :key="adminstrator.id">
             <a
               class="dropdown-item px-3 py-3 justify-content-between d-flex"
               href="#"
@@ -159,7 +147,7 @@ export default {
     return {
       adminstrations: [
         {
-          id: 1,
+          id: 0,
           img: "m-dovud.svg",
           full_name: "Behzod",
         },
@@ -169,28 +157,28 @@ export default {
           full_name: "Akbar",
         },
         {
-          id: 1,
+          id: 2,
           img: "m-dovud.svg",
           full_name: "Axror",
         },
       ],
       notifications: [
         {
-          id: 1,
+          id: 0,
           status: "unread",
           notification_time: "05.11.2022",
           notification_text: "Hello everybody",
           sender: "Robert",
         },
         {
-          id: 2,
+          id: 1,
           status: "unread",
           notification_time: "05.11.2022",
           notification_text: "Hello everybody",
           sender: "Alex",
         },
         {
-          id: 3,
+          id: 2,
           status: "unread",
           notification_time: "05.11.2022",
           notification_text: "Hello everybody",
@@ -206,7 +194,7 @@ export default {
       ],
       messages: [
         {
-          id: 1,
+          id: 0,
           time: "10:00 am",
           sender: "Abdulakhad",
           message_text: "Hello buddy!",
@@ -220,14 +208,14 @@ export default {
           img: "m-alex.svg",
         },
         {
-          id: 1,
+          id: 2,
           time: "10:00 am",
           sender: "Nodirkhon",
           message_text: "Hello everyone!",
           img: "m-dovud.svg",
         },
         {
-          id: 1,
+          id: 3,
           time: "10:00 am",
           sender: "Nodirkhon",
           message_text: "Hello everyone!",

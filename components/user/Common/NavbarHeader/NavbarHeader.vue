@@ -192,7 +192,7 @@
               </div>
             </div>
 
-            <div v-else class="modal-body__forget">
+            <div v-else-if="authType == 2" class="modal-body__forget">
               <div class="input-group mt-3">
                 <input
                   type="email"
@@ -210,6 +210,37 @@
               <p class="modal-body__body-warning" v-if="warning.emailStatus">
                 {{ warning.email }}
               </p>
+            </div>
+
+            <div v-else-if="authType == 3" class="modal-body__forget">
+              <div
+                class="d-flex justify-content-center flex-column align-items-center w-100"
+              >
+                <ul
+                  class="code-wrapper list-unstyled justify-content-between d-flex"
+                >
+                  <li class="code-wrapper-item">
+                    <input type="number" required class="code-wrapper-input" />
+                  </li>
+                  <li class="code-wrapper-item">
+                    <input type="number" class="code-wrapper-input" />
+                  </li>
+                  <li class="code-wrapper-item">
+                    <input type="number" class="code-wrapper-input" />
+                  </li>
+                  <li class="code-wrapper-item">
+                    <input type="number" class="code-wrapper-input" />
+                  </li>
+                </ul>
+                <div class="d-flex justify-content-center w-100">
+                  <p v-if="currentTimeInSeconds > 0">
+                    {{ timeDisplay }}
+                  </p>
+                  <p class="label label-success" @click="resend" v-else>
+                    Send Reset Instructions
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -242,6 +273,7 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
+      currentTimeInSeconds: 120,
       authType: 0,
       user: {
         email: "",
@@ -249,6 +281,7 @@ export default {
         fullName: "",
         phoneNumber: "",
         confirmPassword: "",
+        confirmCode: "",
       },
       warning: {
         email: "Enter your E-mail*",
@@ -267,6 +300,13 @@ export default {
   },
   computed: {
     ...mapGetters({ userInfo: "auth/getUser" }),
+    timeDisplay() {
+      const minutes = parseInt(this.currentTimeInSeconds / 60);
+      const seconds = this.currentTimeInSeconds % 60;
+      const paddedMinutes = ("0" + minutes).slice(-2);
+      const paddedSeconds = ("0" + seconds).slice(-2);
+      return `${paddedMinutes} : ${paddedSeconds}`;
+    },
   },
 
   methods: {
@@ -286,9 +326,24 @@ export default {
         } else {
           this.checkWarning();
         }
+      } else if (this.authType == 2) {
+        this.authType = 3;
+        this.startCount();
       } else {
         console.log("signing up");
       }
+    },
+
+    resend() {
+      this.currentTimeInSeconds = 120;
+    },
+
+    startCount() {
+      setInterval(() => {
+        if (this.currentTimeInSeconds > 0) {
+          this.currentTimeInSeconds--;
+        }
+      }, 1000);
     },
 
     checkWarning() {
