@@ -3,7 +3,7 @@
     <div class="chat-box d-flex">
       <div class="chat-box-menu">
         <div class="search-bar">
-          <input type="text" placeholder="Searching..." />
+          <input type="text" placeholder="Search" />
         </div>
         <ul class="chat-box-list list-unstyled">
           <li

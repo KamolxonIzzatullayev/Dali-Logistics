@@ -588,20 +588,27 @@ export default {
           } else if (this.owner == "receiver") {
             a.whoe_is = 2;
           }
-          a.full_name = sender.name;
-          a.full_name_from = receiver.name;
-          a.email = sender.email;
-          a.email_from = receiver.email;
-          a.phone = sender.phone;
-          a.phone_from = receiver.phone_from;
-          a.region_id = sender.region;
-          a.region_from_id = receiver.region;
-          a.address = sender.address;
-          a.address_from = receiver.address;
-          a.mail_index = sender.index;
-          a.mail_from_index = receiver.index;
-          a.condition_id = sender.condition;
-          a.delivery_id = receiver.method;
+
+          if (this.productType == "adding") {
+            a.product_detail = 1;
+          } else {
+            a.product_detail = 2;
+          }
+
+          a.full_name = this.sender.name;
+          a.full_name_from = this.receiver.name;
+          a.email = this.sender.email;
+          a.email_from = this.receiver.email;
+          a.phone = this.senderResults.formattedNumber;
+          a.phone_from = this.receiverResults.formattedNumber;
+          a.region_id = this.sender.region;
+          a.region_from_id = this.receiver.region;
+          a.address = this.sender.address;
+          a.address_from = this.receiver.address;
+          a.mail_index = this.sender.index;
+          a.mail_from_index = this.receiver.index;
+          a.condition_id = this.sender.condition;
+          a.delivery_id = this.receiver.method;
           a.comment = this.comment;
           a.product = this.accordions;
           console.log(a);

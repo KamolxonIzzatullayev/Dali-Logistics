@@ -161,12 +161,13 @@ export const actions = {
         }
     },
 
-    async sendApplication(payload) {
+    async sendApplication(_, payload) {
         try {
             const token = Cookie.get('token')
             const headers = {
                 "Authorization": `Bearer ${token}`,
             }
+            console.log(payload);
             if (token) {
                 this.$axios.post(`/application`, payload, { headers })
                     .then((result) => {
@@ -178,12 +179,12 @@ export const actions = {
 
             } else {
                 this.$axios.post(`/application`, payload)
-                .then((result) => {
-                    console.log(result);
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
+                    .then((result) => {
+                        console.log(result);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             }
 
         } catch (error) {

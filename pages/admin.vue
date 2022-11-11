@@ -37,7 +37,7 @@ export default {
     isDashboardFilterVisible() {
       if (this.$route.path == "/admin") {
         return false;
-      } else if (this.$route.path == "/admin/account") {
+      } else if (this.$route.path == "/admin/account" || this.$route.path == "/admin/online-chat") {
         return false;
       } else {
         return true;
