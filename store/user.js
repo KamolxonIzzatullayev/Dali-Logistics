@@ -47,7 +47,7 @@ export const state = () => ({
                     status: false,
                 },
             ],
-            adresses: [
+            addresses: [
                 {
                     id: 0,
                     country: 'Uzbekistan',
@@ -55,7 +55,7 @@ export const state = () => ({
                     city: 'Chortoq',
                     street: 'kokcha, 84',
                     postcode: '161100',
-                }
+                },
             ]
         },
         {
@@ -127,9 +127,11 @@ export const state = () => ({
     ],
 
 })
+
 export const getters = {
     getProfile(state) { return state.profile },
 }
+
 export const mutations = {
     SET_PROFILE(state, name, id) {
         state.profile.forEach(element => {
@@ -150,6 +152,7 @@ export const mutations = {
         });
     }
 }
+
 export const actions = {
 
 }
